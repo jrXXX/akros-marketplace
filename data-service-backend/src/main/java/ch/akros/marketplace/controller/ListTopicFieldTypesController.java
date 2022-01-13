@@ -8,24 +8,24 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
-import ch.akros.marketplace.api.ListFieldTypeDefinitionApi;
-import ch.akros.marketplace.api.model.FieldTypeDefinitionDTO;
-import ch.akros.marketplace.service.FieldTypeDefinitionService;
+import ch.akros.marketplace.api.ListTopicFieldTypesApi;
+import ch.akros.marketplace.api.model.FieldTypeResponseDTO;
+import ch.akros.marketplace.service.TopicService;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
-public class ListFieldTypeDefinitionsController implements ListFieldTypeDefinitionApi {
+public class ListTopicFieldTypesController implements ListTopicFieldTypesApi {
 	@Autowired
-	private FieldTypeDefinitionService fieldTypeDefinitionService;
+	private TopicService topicService;
 
 	@Override
-	public ResponseEntity<List<FieldTypeDefinitionDTO>> listFieldTypeDefinitionGet() {
+	public ResponseEntity<List<FieldTypeResponseDTO>> listTopicFieldTypesThemeIdSearchGet(Integer themeId, Boolean search) {
 		try {
-			log.debug("ListFieldTypeDefinitionsController.listFieldTypesthemeIdGet() called");
+			log.debug("ListTopicFieldTypesController.listFieldTypesthemeIdGet() called");
 
-			List<FieldTypeDefinitionDTO> fieldTypeResponseList = fieldTypeDefinitionService.listFieldTypeDefinitions();
+			List<FieldTypeResponseDTO> fieldTypeResponseList = topicService.listTopicFieldTypes((long) themeId, search);
 			return ResponseEntity.status(HttpStatus.OK).body(fieldTypeResponseList);
 		} catch (Exception ex) {
 			log.error(ex.getMessage(), ex);

@@ -11,5 +11,8 @@ import ch.akros.marketplace.entity.FieldType;
 @Repository
 public interface FieldTypeRepository extends JpaRepository<FieldType, Long> {
 	@Query("select ft from fieldType ft where ft.theme.themeId = :themeId and ft.searchable=true order by sortNumber")
-	List<FieldType> listFieldTypesOfTheme(Long themeId);
+	List<FieldType> listThemeSearchFieldTypes(Long themeId);
+
+	@Query("select ft from fieldType ft where ft.theme.themeId = :themeId and (ft.search=:search or ft.offer!=:search) order by sortNumber")
+	List<FieldType> listTopicSearchFieldTypes(Long themeId, Boolean search);
 }

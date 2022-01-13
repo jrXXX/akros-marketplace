@@ -31,7 +31,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/VWThemeResponseDTO'
 
-  /listFieldTypes/{themeId}:
+  /listThemeSearchFieldTypes/{themeId}:
     get:
       summary: List the search field types for one theme
       description: used for primary search page
@@ -50,6 +50,47 @@ paths:
               schema:
                 items:
                   $ref: '#/components/schemas/FieldTypeResponseDTO'
+
+  /listTopicFieldTypes/{themeId}/{search}:
+    get:
+      summary: List the field types to edit and add another search/offer topic 
+      description: used to get the fields to add a new topic
+      parameters:
+        - name: themeId
+          in: path
+          required: true
+          description: Foreign Key ID to Theme.
+          schema:
+            type: integer
+        - name: search
+          in: path
+          required: true
+          description: true=search-topic, false=offer-topic
+          schema:
+            type: boolean
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/FieldTypeResponseDTO'
+
+  /saveTopic:
+    post:
+      summary: Save a topic 
+      description: Save a topic
+      requestBody:
+        description: All values to save a topic
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TopicStoreDTO'
+        required: true
+      responses:
+        200:
+          description: OK
       
 components:
   schemas:
@@ -124,3 +165,34 @@ components:
           type: string
         sortNumber:
           type: integer
+
+    TopicStoreDTO:
+      type: object
+      properties:
+        topicId:
+          type: integer
+          format: int64
+        themeId:
+          type: integer
+          format: int64
+        searchOrOffer:
+          type: string
+          example: OFFER
+        topicValueStores:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopicValueStoreDTO'
+
+    TopicValueStoreDTO:
+      type: object
+      properties:
+        fieldTypeId:
+          type: integer
+          format: int64
+        valueNum:
+          type: double
+          format: int64
+        valueVarchar:
+          type: string
+        valueDate:
+          type: date

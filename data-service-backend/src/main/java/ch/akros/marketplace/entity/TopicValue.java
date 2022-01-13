@@ -1,6 +1,6 @@
 package ch.akros.marketplace.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -51,9 +51,12 @@ public class TopicValue {
 	@ToString.Exclude
 	private FieldType fieldType;
 
-	@Column(name = "VALID_FROM")
-	private Date validFrom;
+	@Column(name = "VALUE_NUM")
+	private Double valueNum;
 
-	@Column(name = "VALID_TO")
-	private Date validTo;
+	@Column(name = "VALUE_VARCHAR")
+	private String valueVarchar;
+
+	@Column(name = "VALUE_DATE")
+	private LocalDate valueDate;
 }

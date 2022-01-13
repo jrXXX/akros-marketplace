@@ -162,6 +162,8 @@ insert into field_type_choose values (2, 8, 'Wohnung', 2);
 insert into field_type_choose values (3, 8, 'Haus', 3);
 insert into field_type_choose values (4, 8, 'Parkplatz', 4);
 
+-- Advertiser  
+insert into advertiser values (1, 'J', 'R', 'j.r@world.com', '0123456789' );
   
   COMMIT;
 EOSQL

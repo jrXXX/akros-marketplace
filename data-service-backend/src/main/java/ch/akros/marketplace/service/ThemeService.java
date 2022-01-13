@@ -39,8 +39,8 @@ public class ThemeService {
 		return result;
 	}
 
-	public List<FieldTypeResponseDTO> listFieldTypes(Long themeId) {
-		return fieldTypeRepository.listFieldTypesOfTheme(themeId).stream().map(this::toFieldTypeResponseDTO)
+	public List<FieldTypeResponseDTO> listThemeSearchFieldTypes(Long themeId) {
+		return fieldTypeRepository.listThemeSearchFieldTypes(themeId).stream().map(this::toFieldTypeResponseDTO)
 				.collect(Collectors.toList());
 	}
 

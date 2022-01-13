@@ -5,7 +5,7 @@
 
 ### Database Configuration
 - **user** : am
-- **passsword** : am
+- **password** : am
 - **database_name** : am
 - **host** : localhost
 - **port** : 5432

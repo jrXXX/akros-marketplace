@@ -8,25 +8,25 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
-import ch.akros.marketplace.api.ListThemesApi;
-import ch.akros.marketplace.api.model.VWThemeResponseDTO;
+import ch.akros.marketplace.api.ListThemeSearchFieldTypesApi;
+import ch.akros.marketplace.api.model.FieldTypeResponseDTO;
 import ch.akros.marketplace.service.ThemeService;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
-public class ListThemesController implements ListThemesApi {
+public class ListThemeSearchFieldTypesController implements ListThemeSearchFieldTypesApi {
 	@Autowired
 	private ThemeService themeService;
 
 	@Override
-	public ResponseEntity<List<VWThemeResponseDTO>> listThemesGet() {
+	public ResponseEntity<List<FieldTypeResponseDTO>> listThemeSearchFieldTypesThemeIdGet(Integer themeId) {
 		try {
-			log.debug("ListThemesController.listThemesGet() called");
+			log.debug("ListFieldTypesController.listFieldTypesthemeIdGet() called");
 
-			List<VWThemeResponseDTO> vwThemeResponseDTOList = themeService.listThemes();
-			return ResponseEntity.status(HttpStatus.OK).body(vwThemeResponseDTOList);
+			List<FieldTypeResponseDTO> fieldTypeResponseList = themeService.listThemeSearchFieldTypes((long) themeId);
+			return ResponseEntity.status(HttpStatus.OK).body(fieldTypeResponseList);
 		} catch (Exception ex) {
 			log.error(ex.getMessage(), ex);
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
