@@ -23,7 +23,7 @@ The folder **../db_init** is used for initialization of the database.
 The initialization will fail, if encoding of file **../db_init/01-init.sh** is not Unix like. Line endings have to be CR and not Windows like CRLF.
 
 - Convert to Unix with command : **dos2unix < 01-init.sh > 01-init.sh.ux** (replace old file with new one)
-- Force git not to autoconvert CR to CRLF (always CR) : **git config --global core.autocrlf true**
+- Force git not to autoconvert CR to CRLF (always CR) : **git config --global core.autocrlf false**
 
 
 ### Start/Stop
