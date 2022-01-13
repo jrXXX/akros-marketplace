@@ -18,6 +18,14 @@ To rebuild the database, shut the database down and delete the **../pg_data** di
 
 The folder **../db_init** is used for initialization of the database.
 
+### Warning
+
+The initialization will fail, if encoding of file **../db_init/01-init.sh** is not Unix like. Line endings have to be CR and not Windows like CRLF.
+
+- Convert to Unix with command : dos2unix < 01-init.sh > 01-init.sh.ux (replace old file with new one)
+- Force git not to autoconvert CR to CRLF : git config --global core.autocrlf true
+
+
 ### Start/Stop
 - **start**: docker-compose up
 - **stop**: docker-compose down
