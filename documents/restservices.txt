@@ -1,0 +1,21 @@
+Static
+- Search->Resultlist
+- Read Details
+- Offer create/modify/delete
+- List of own offers/advertisements
+
+
+Dynamic
+- Read head groups->List
+- Read List of Search UI Elements
+- Search->Resultlist
+- Read Details
+- Offer Advertisements create/modify/delete
+- List of own offers/advertisements
+
+
+Administration
+- Head Group create/modify/delete
+- Field Types create/modify/delete
+- Field Types Chooses create/modify/delete
+

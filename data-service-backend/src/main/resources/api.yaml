@@ -1,0 +1,126 @@
+openapi: 3.0.3
+info:
+  title: Akros Marketplace
+  version: 1.0.0-SNAPSHOT
+  description: YAML Swagger Configuration for the Akros Marketplace
+
+paths:
+  /listFieldTypeDefinition:
+    get:
+      summary: List the field type definitions
+      description: helper function only
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/FieldTypeDefinitionDTO'
+
+  /listThemes:
+    get:
+      summary: List the themes
+      description: used for primary search page
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/VWThemeResponseDTO'
+
+  /listFieldTypes/{themeId}:
+    get:
+      summary: List the search field types for one theme
+      description: used for primary search page
+      parameters:
+        - name: themeId
+          in: path
+          required: true
+          description: Foreign Key ID to Theme.
+          schema:
+            type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/FieldTypeResponseDTO'
+      
+components:
+  schemas:
+    FieldTypeDefinitionDTO:
+      type: object
+      properties:
+        fieldTypeDefinitionId:
+          type: integer
+          format: int64
+        description:
+          type: string
+          example: Parkplatz
+
+    VWThemeResponseDTO:
+      type: object
+      properties:
+        themeId:
+          type: integer
+          format: int64
+        description:
+          type: string
+          example: Unterkuenfte
+        searchCount:
+          type: integer
+          example: 5
+        offerCount:
+          type: integer
+          example: 5
+
+    FieldTypeResponseDTO:
+      type: object
+      properties:
+        fieldTypeId:
+          type: integer
+          format: int64
+        fieldTypeDefinitionId:
+          type: integer
+          format: int64
+        fieldTypeDefinitionDescription:
+          type: string
+          example: Number
+        description:
+          type: string
+          example: Beschreibung
+        shortDescription:
+          type: string
+          example: Beschreibung der Unterkunft
+        minValue:
+          type: integer
+          example: 5
+        maxValue:
+          type: integer
+          example: 5
+        search:
+          type: boolean
+          example: false
+        offer:
+          type: boolean
+          example: false
+        fieldTypeChooses:
+          type: array
+          items:
+            $ref: '#/components/schemas/FieldTypeChooseDTO'
+
+    FieldTypeChooseDTO:
+      type: object
+      properties:
+        fieldTypeChooseId:
+          type: integer
+          format: int64
+        description:
+          type: string
+        sortNumber:
+          type: integer
