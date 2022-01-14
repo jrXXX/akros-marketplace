@@ -16,7 +16,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -66,7 +65,7 @@ public class FieldType {
 	@OneToMany(mappedBy = "fieldType", cascade = CascadeType.ALL)
 	private List<FieldTypeChoose> fieldTypeChooses;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(referencedColumnName = "FIELD_TYPE_DEFINITION_ID", name = "FIELD_TYPE_DEFINITION_ID", foreignKey = @ForeignKey(name = "FIELD_TYPE_FIELD_TYPE_DEFINITION_FK"))
 	@ToString.Exclude
 	private FieldTypeDefinition fieldTypeDefinition;

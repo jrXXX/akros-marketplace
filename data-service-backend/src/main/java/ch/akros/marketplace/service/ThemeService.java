@@ -47,18 +47,26 @@ public class ThemeService {
 	// TODO : mapper
 	private FieldTypeResponseDTO toFieldTypeResponseDTO(FieldType fieldType) {
 		FieldTypeResponseDTO result = new FieldTypeResponseDTO();
+
+		// field type
+		result.setThemeId(fieldType.getTheme().getThemeId());
 		result.setFieldTypeId(fieldType.getFieldTypeId());
-		result.setFieldTypeDefinitionId(fieldType.getFieldTypeDefinition().getFieldTypeDefinitionId());
-		result.setFieldTypeDefinitionDescription(fieldType.getFieldTypeDefinition().getDescription());
 		result.setDescription(fieldType.getDescription());
 		result.setShortDescription(fieldType.getShortDescription());
 		result.setMinValue(fieldType.getMinValue());
 		result.setMaxValue(fieldType.getMaxValue());
 		result.setSearch(fieldType.isSearch());
 		result.setOffer(fieldType.isOffer());
+
+		// field type definition
+		result.setFieldTypeDefinitionId(fieldType.getFieldTypeDefinition().getFieldTypeDefinitionId());
+		result.setFieldTypeDefinitionDescription(fieldType.getFieldTypeDefinition().getDescription());
+
+		// field type chooses
 		result.setFieldTypeChooses(
 				fieldType.getFieldTypeChooses().stream().sorted((e1, e2) -> e1.getSortNumber() - e2.getSortNumber())
 						.map(this::toFieldTypeChoosesDTO).collect(Collectors.toList()));
+		
 		return result;
 	}
 

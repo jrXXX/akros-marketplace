@@ -42,6 +42,7 @@ paths:
           description: Foreign Key ID to Theme.
           schema:
             type: integer
+            format: int64
       responses:
         200:
           description: OK
@@ -62,12 +63,13 @@ paths:
           description: Foreign Key ID to Theme.
           schema:
             type: integer
+            format: int64
         - name: search
           in: path
           required: true
-          description: true=search-topic, false=offer-topic
+          description: valid values are 'SEARCH' and 'OFFER' 
           schema:
-            type: boolean
+            type: string
       responses:
         200:
           description: OK
@@ -88,6 +90,42 @@ paths:
             schema:
               $ref: '#/components/schemas/TopicStoreDTO'
         required: true
+      responses:
+        200:
+          description: OK
+
+  /loadTopic/{topicId}:
+    get:
+      summary: Load a topic 
+      description: Load a topic
+      parameters:
+        - name: topicId
+          in: path
+          required: true
+          description: Primary Key ID to Topic.
+          schema:
+            type: integer
+            format: int64
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TopicLoadDTO'
+
+  /deleteTopic/{topicId}:
+    get:
+      summary: Delete a topic 
+      description: Delete a topic
+      parameters:
+        - name: topicId
+          in: path
+          required: true
+          description: Primary Key ID to Topic.
+          schema:
+            type: integer
+            format: int64
       responses:
         200:
           description: OK
@@ -123,6 +161,9 @@ components:
     FieldTypeResponseDTO:
       type: object
       properties:
+        themeId:
+          type: integer
+          format: int64
         fieldTypeId:
           type: integer
           format: int64
@@ -177,7 +218,7 @@ components:
           format: int64
         searchOrOffer:
           type: string
-          example: OFFER
+          example: OFFER or SEARCH
         topicValueStores:
           type: array
           items:
@@ -196,3 +237,63 @@ components:
           type: string
         valueDate:
           type: date
+        valueBoolean:
+          type: boolean
+
+    TopicLoadDTO:
+      type: object
+      properties:
+        topicId:
+          type: integer
+          format: int64
+        themeId:
+          type: integer
+          format: int64
+        searchOrOffer:
+          type: string
+          example: OFFER or SEARCH
+        topicValueLoads:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopicValueLoadDTO'
+
+    TopicValueLoadDTO:
+      type: object
+      properties:
+        topicValueId:
+          type: integer
+          format: int64
+        fieldTypeId:
+          type: integer
+          format: int64
+        fieldTypeDescription:
+          type: string
+          example: Beschreibung
+        fieldTypeShortDescription:
+          type: string
+          example: Beschreibung
+        fieldTypeDefinitionId:
+          type: integer
+          format: int64
+        fieldTypeDefinitionDescription:
+          type: string
+          example: Number
+        minValue:
+          type: integer
+          example: 5
+        maxValue:
+          type: integer
+          example: 5
+        valueNum:
+          type: double
+          format: int64
+        valueVarchar:
+          type: string
+        valueDate:
+          type: date
+        valueBoolean:
+          type: boolean
+        fieldTypeChooses:
+          type: array
+          items:
+            $ref: '#/components/schemas/FieldTypeChooseDTO'

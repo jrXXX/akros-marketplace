@@ -21,11 +21,11 @@ public class ListTopicFieldTypesController implements ListTopicFieldTypesApi {
 	private TopicService topicService;
 
 	@Override
-	public ResponseEntity<List<FieldTypeResponseDTO>> listTopicFieldTypesThemeIdSearchGet(Integer themeId, Boolean search) {
+	public ResponseEntity<List<FieldTypeResponseDTO>> listTopicFieldTypesThemeIdSearchGet(Long themeId, String search) {
 		try {
 			log.debug("ListTopicFieldTypesController.listFieldTypesthemeIdGet() called");
 
-			List<FieldTypeResponseDTO> fieldTypeResponseList = topicService.listTopicFieldTypes((long) themeId, search);
+			List<FieldTypeResponseDTO> fieldTypeResponseList = topicService.listTopicFieldTypes(themeId, search);
 			return ResponseEntity.status(HttpStatus.OK).body(fieldTypeResponseList);
 		} catch (Exception ex) {
 			log.error(ex.getMessage(), ex);

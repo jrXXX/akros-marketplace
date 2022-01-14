@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 
 import ch.akros.marketplace.api.model.FieldTypeChooseDTO;
 import ch.akros.marketplace.api.model.FieldTypeResponseDTO;
+import ch.akros.marketplace.api.model.TopicLoadDTO;
 import ch.akros.marketplace.api.model.TopicStoreDTO;
+import ch.akros.marketplace.api.model.TopicValueLoadDTO;
 import ch.akros.marketplace.api.model.TopicValueStoreDTO;
 import ch.akros.marketplace.entity.FieldType;
 import ch.akros.marketplace.entity.FieldTypeChoose;
@@ -35,14 +37,15 @@ public class TopicService {
 	@Autowired
 	private TopicRepository topicRepository;
 
-	public List<FieldTypeResponseDTO> listTopicFieldTypes(Long themeId, Boolean search) {
-		return fieldTypeRepository.listTopicSearchFieldTypes(themeId, search).stream().map(this::toFieldTypeResponseDTO)
-				.collect(Collectors.toList());
+	public List<FieldTypeResponseDTO> listTopicFieldTypes(Long themeId, String search) {
+		return fieldTypeRepository.listTopicSearchFieldTypes(themeId, "SEARCH".equalsIgnoreCase(search)).stream()
+				.map(this::toFieldTypeResponseDTO).collect(Collectors.toList());
 	}
 
 	// TODO : mapper
 	private FieldTypeResponseDTO toFieldTypeResponseDTO(FieldType fieldType) {
 		FieldTypeResponseDTO result = new FieldTypeResponseDTO();
+		result.setThemeId(fieldType.getTheme().getThemeId());
 		result.setFieldTypeId(fieldType.getFieldTypeId());
 		result.setFieldTypeDefinitionId(fieldType.getFieldTypeDefinition().getFieldTypeDefinitionId());
 		result.setFieldTypeDefinitionDescription(fieldType.getFieldTypeDefinition().getDescription());
@@ -95,5 +98,51 @@ public class TopicService {
 		result.setValueVarchar(topicValueStoreDTO.getValueVarchar());
 		result.setValueDate(topicValueStoreDTO.getValueDate());
 		return result;
+	}
+
+	public TopicLoadDTO loadTopic(Long topicId) {
+		Topic topic = topicRepository.getById(topicId);
+
+		TopicLoadDTO result = new TopicLoadDTO();
+		result.setSearchOrOffer(topic.getSearchOrOffer());
+		result.setThemeId(topic.getTheme().getThemeId());
+		result.setTopicId(topicId);
+
+		result.setTopicValueLoads(
+				topic.getTopicValues().stream().map(this::toTopicValueLoadDTO).collect(Collectors.toList()));
+
+		return result;
+	}
+
+	private TopicValueLoadDTO toTopicValueLoadDTO(TopicValue topicValue) {
+		TopicValueLoadDTO result = new TopicValueLoadDTO();
+
+		result.setTopicValueId(topicValue.getTopicValueId());
+
+		// from FieldTypeDefinition
+		result.setFieldTypeDefinitionId(topicValue.getFieldType().getFieldTypeDefinition().getFieldTypeDefinitionId());
+		result.setFieldTypeDefinitionDescription(topicValue.getFieldType().getFieldTypeDefinition().getDescription());
+		result.setFieldTypeChooses(topicValue.getFieldType().getFieldTypeChooses().stream()
+				.sorted((e1, e2) -> e1.getSortNumber() - e2.getSortNumber()).map(this::toFieldTypeChoosesDTO)
+				.collect(Collectors.toList()));
+
+		// from FieldType
+		result.setFieldTypeId(topicValue.getFieldType().getFieldTypeId());
+		result.setFieldTypeDescription(topicValue.getFieldType().getDescription());
+		result.setFieldTypeShortDescription(topicValue.getFieldType().getShortDescription());
+		result.setMaxValue(topicValue.getFieldType().getMaxValue());
+		result.setMinValue(topicValue.getFieldType().getMinValue());
+
+		// from TopicValue
+		result.setValueBoolean(topicValue.getValueBoolean());
+		result.setValueDate(topicValue.getValueDate());
+		result.setValueNum(topicValue.getValueNum());
+		result.setValueVarchar(topicValue.getValueVarchar());
+
+		return result;
+	}
+
+	public void deleteTopic(Long topicId) {
+		topicRepository.delete(topicRepository.getById(topicId));
 	}
 }

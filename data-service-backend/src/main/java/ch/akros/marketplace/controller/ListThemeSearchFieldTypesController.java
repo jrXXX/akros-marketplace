@@ -21,11 +21,11 @@ public class ListThemeSearchFieldTypesController implements ListThemeSearchField
 	private ThemeService themeService;
 
 	@Override
-	public ResponseEntity<List<FieldTypeResponseDTO>> listThemeSearchFieldTypesThemeIdGet(Integer themeId) {
+	public ResponseEntity<List<FieldTypeResponseDTO>> listThemeSearchFieldTypesThemeIdGet(Long themeId) {
 		try {
 			log.debug("ListFieldTypesController.listFieldTypesthemeIdGet() called");
 
-			List<FieldTypeResponseDTO> fieldTypeResponseList = themeService.listThemeSearchFieldTypes((long) themeId);
+			List<FieldTypeResponseDTO> fieldTypeResponseList = themeService.listThemeSearchFieldTypes(themeId);
 			return ResponseEntity.status(HttpStatus.OK).body(fieldTypeResponseList);
 		} catch (Exception ex) {
 			log.error(ex.getMessage(), ex);

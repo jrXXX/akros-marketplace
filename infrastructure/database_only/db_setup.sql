@@ -93,6 +93,7 @@ create table topic_value
   value_num             numeric(18,2),
   value_varchar         varchar(4000),
   value_date            date,
+  value_boolean         boolean,
   constraint topic_value_pk primary key (topic_value_id),
   constraint topic_value_topic_fk foreign key (topic_id) references topic(topic_id),
   constraint topic_value_theme_fk foreign key (theme_id) references theme(theme_id),
