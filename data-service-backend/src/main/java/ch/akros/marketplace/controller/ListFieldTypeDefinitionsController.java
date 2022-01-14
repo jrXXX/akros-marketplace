@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.controller;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.akros.marketplace.api.ListFieldTypeDefinitionApi;
-import ch.akros.marketplace.api.model.FieldTypeDefinitionDTO;
+import ch.akros.marketplace.api.model.FieldTypeDefinitionResponseDTO;
 import ch.akros.marketplace.service.FieldTypeDefinitionService;
 import lombok.extern.slf4j.Slf4j;
 
@@ -17,19 +18,20 @@ import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
 public class ListFieldTypeDefinitionsController implements ListFieldTypeDefinitionApi {
-	@Autowired
-	private FieldTypeDefinitionService fieldTypeDefinitionService;
+  @Autowired
+  private FieldTypeDefinitionService fieldTypeDefinitionService;
 
-	@Override
-	public ResponseEntity<List<FieldTypeDefinitionDTO>> listFieldTypeDefinitionGet() {
-		try {
-			log.debug("ListFieldTypeDefinitionsController.listFieldTypesthemeIdGet() called");
+  @Override
+  public ResponseEntity<List<FieldTypeDefinitionResponseDTO>> listFieldTypeDefinitionGet() {
+    try {
+      log.debug("ListFieldTypeDefinitionsController.listFieldTypesthemeIdGet() called");
 
-			List<FieldTypeDefinitionDTO> fieldTypeResponseList = fieldTypeDefinitionService.listFieldTypeDefinitions();
-			return ResponseEntity.status(HttpStatus.OK).body(fieldTypeResponseList);
-		} catch (Exception ex) {
-			log.error(ex.getMessage(), ex);
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-		}
-	}
+      List<FieldTypeDefinitionResponseDTO> fieldTypeResponseList = fieldTypeDefinitionService.listFieldTypeDefinitions();
+      return ResponseEntity.status(HttpStatus.OK).body(fieldTypeResponseList);
+    }
+    catch (Exception ex) {
+      log.error(ex.getMessage(), ex);
+      return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+    }
+  }
 }

@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.controller;
 
 import java.util.List;
@@ -17,19 +18,20 @@ import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
 public class ListThemesController implements ListThemesApi {
-	@Autowired
-	private ThemeService themeService;
+  @Autowired
+  private ThemeService themeService;
 
-	@Override
-	public ResponseEntity<List<VWThemeResponseDTO>> listThemesGet() {
-		try {
-			log.debug("ListThemesController.listThemesGet() called");
+  @Override
+  public ResponseEntity<List<VWThemeResponseDTO>> listThemesGet() {
+    try {
+      log.debug("ListThemesController.listThemesGet() called");
 
-			List<VWThemeResponseDTO> vwThemeResponseDTOList = themeService.listThemes();
-			return ResponseEntity.status(HttpStatus.OK).body(vwThemeResponseDTOList);
-		} catch (Exception ex) {
-			log.error(ex.getMessage(), ex);
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-		}
-	}
+      List<VWThemeResponseDTO> vwThemeResponseDTOList = themeService.listThemes();
+      return ResponseEntity.status(HttpStatus.OK).body(vwThemeResponseDTOList);
+    }
+    catch (Exception ex) {
+      log.error(ex.getMessage(), ex);
+      return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+    }
+  }
 }

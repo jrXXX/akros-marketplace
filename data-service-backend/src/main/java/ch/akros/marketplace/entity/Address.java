@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.entity;
 
 import javax.persistence.Column;
@@ -26,25 +27,26 @@ import lombok.ToString;
 @ToString
 @Table(name = "ADDRESS")
 public class Address {
-	@Id
-	@Column(name = "ADDRESS_ID", nullable = false, unique = true)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long addressId;
+  @Id
+  @Column(name = "ADDRESS_ID", nullable = false, unique = true)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long   addressId;
 
-	@ManyToOne
-	@ToString.Exclude
-	@JoinColumn(referencedColumnName = "KANTON_ID", name = "KANTON_ID", foreignKey = @ForeignKey(name = "ADDRESS_KANTON_FK"))
-	private Kanton kanton;
+  @ManyToOne
+  @ToString.Exclude
+  @JoinColumn(referencedColumnName = "KANTON_ID", name = "KANTON_ID",
+      foreignKey = @ForeignKey(name = "ADDRESS_KANTON_FK"))
+  private Kanton kanton;
 
-	@Column(name = "STREET_NAME")
-	private String streetName;
+  @Column(name = "STREET_NAME")
+  private String streetName;
 
-	@Column(name = "STREET_NUMBER")
-	private String streetNumber;
+  @Column(name = "STREET_NUMBER")
+  private String streetNumber;
 
-	@Column(name = "POSTAL_CODE")
-	private String postalCode;
+  @Column(name = "POSTAL_CODE")
+  private String postalCode;
 
-	@Column(name = "CITY")
-	private String city;
+  @Column(name = "CITY")
+  private String city;
 }

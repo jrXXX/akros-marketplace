@@ -16,7 +16,7 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/FieldTypeDefinitionDTO'
+                  $ref: '#/components/schemas/FieldTypeDefinitionResponseDTO'
 
   /listThemes:
     get:
@@ -88,7 +88,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/TopicStoreDTO'
+              $ref: '#/components/schemas/TopicStoreRequestDTO'
         required: true
       responses:
         200:
@@ -112,7 +112,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TopicLoadDTO'
+                $ref: '#/components/schemas/TopicLoadResponseDTO'
 
   /deleteTopic/{topicId}:
     get:
@@ -129,10 +129,29 @@ paths:
       responses:
         200:
           description: OK
-      
+
+  /searchTopic:
+    post:
+      summary: Save a topic 
+      description: Save a topic
+      requestBody:
+        description: All values to save a topic
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TopicSearchRequestDTO'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TopicSearchListResponseDTO'
+
 components:
   schemas:
-    FieldTypeDefinitionDTO:
+    FieldTypeDefinitionResponseDTO:
       type: object
       properties:
         fieldTypeDefinitionId:
@@ -194,9 +213,9 @@ components:
         fieldTypeChooses:
           type: array
           items:
-            $ref: '#/components/schemas/FieldTypeChooseDTO'
+            $ref: '#/components/schemas/FieldTypeChooseResponseDTO'
 
-    FieldTypeChooseDTO:
+    FieldTypeChooseResponseDTO:
       type: object
       properties:
         fieldTypeChooseId:
@@ -207,7 +226,7 @@ components:
         sortNumber:
           type: integer
 
-    TopicStoreDTO:
+    TopicStoreRequestDTO:
       type: object
       properties:
         topicId:
@@ -222,9 +241,9 @@ components:
         topicValueStores:
           type: array
           items:
-            $ref: '#/components/schemas/TopicValueStoreDTO'
+            $ref: '#/components/schemas/TopicValueStoreRequestDTO'
 
-    TopicValueStoreDTO:
+    TopicValueStoreRequestDTO:
       type: object
       properties:
         fieldTypeId:
@@ -240,7 +259,7 @@ components:
         valueBoolean:
           type: boolean
 
-    TopicLoadDTO:
+    TopicLoadResponseDTO:
       type: object
       properties:
         topicId:
@@ -252,12 +271,12 @@ components:
         searchOrOffer:
           type: string
           example: OFFER or SEARCH
-        topicValueLoads:
+        topicValues:
           type: array
           items:
-            $ref: '#/components/schemas/TopicValueLoadDTO'
+            $ref: '#/components/schemas/TopicValueLoadResponseDTO'
 
-    TopicValueLoadDTO:
+    TopicValueLoadResponseDTO:
       type: object
       properties:
         topicValueId:
@@ -296,4 +315,93 @@ components:
         fieldTypeChooses:
           type: array
           items:
-            $ref: '#/components/schemas/FieldTypeChooseDTO'
+            $ref: '#/components/schemas/FieldTypeChooseResponseDTO'
+
+    TopicSearchRequestDTO:
+      type: array
+      items:
+        $ref: '#/components/schemas/TopicSearchFieldTypeValuesRequestDTO'
+
+    TopicSearchFieldTypeValuesRequestDTO:
+      type: object
+      properties:
+        fieldTypeId:
+          type: integer
+          format: int64
+        themeId:
+          type: integer
+          format: int64
+        valueNumFrom:
+          type: double
+          format: int64
+        valueNumTo:
+          type: double
+          format: int64
+        valueVarchar:
+          type: string
+        valueDate:
+          type: date
+        valueBoolean:
+          type: boolean
+
+    TopicSearchListResponseDTO:
+      type: object
+      properties:
+        columnHeader:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopicSearchColumnHeaderResponseDTO'
+        topics:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopicSearchResponseDTO'
+
+    TopicSearchColumnHeaderResponseDTO:
+      type: object
+      properties:
+        fieldTypeId:
+          type: integer
+          format: int64
+        description:
+          type: string
+          example: Beschreibung
+        shortDescription:
+          type: string
+          example: Beschreibung der Unterkunft
+
+    TopicSearchResponseDTO:
+      type: object
+      properties:
+        topicId:
+          type: integer
+          format: int64
+        topicValues:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopicSearchValueResponseDTO'
+
+
+    TopicSearchValueResponseDTO:
+      type: object
+      properties:
+        topicId:
+          type: integer
+          format: int64
+        fieldTypeId:
+          type: integer
+          format: int64
+        valueNum:
+          type: double
+          format: int64
+        valueVarchar:
+          type: string
+        valueDate:
+          type: date
+        valueBoolean:
+          type: boolean
+        fieldTypeDefinitionId:
+          type: integer
+          format: int64
+        fieldTypeDefinitionDescription:
+          type: string
+          example: Number

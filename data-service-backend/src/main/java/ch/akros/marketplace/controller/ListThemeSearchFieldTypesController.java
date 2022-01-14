@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.controller;
 
 import java.util.List;
@@ -17,19 +18,20 @@ import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
 public class ListThemeSearchFieldTypesController implements ListThemeSearchFieldTypesApi {
-	@Autowired
-	private ThemeService themeService;
+  @Autowired
+  private ThemeService themeService;
 
-	@Override
-	public ResponseEntity<List<FieldTypeResponseDTO>> listThemeSearchFieldTypesThemeIdGet(Long themeId) {
-		try {
-			log.debug("ListFieldTypesController.listFieldTypesthemeIdGet() called");
+  @Override
+  public ResponseEntity<List<FieldTypeResponseDTO>> listThemeSearchFieldTypesThemeIdGet(Long themeId) {
+    try {
+      log.debug("ListFieldTypesController.listFieldTypesthemeIdGet() called");
 
-			List<FieldTypeResponseDTO> fieldTypeResponseList = themeService.listThemeSearchFieldTypes(themeId);
-			return ResponseEntity.status(HttpStatus.OK).body(fieldTypeResponseList);
-		} catch (Exception ex) {
-			log.error(ex.getMessage(), ex);
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-		}
-	}
+      List<FieldTypeResponseDTO> fieldTypeResponseList = themeService.listThemeSearchFieldTypes(themeId);
+      return ResponseEntity.status(HttpStatus.OK).body(fieldTypeResponseList);
+    }
+    catch (Exception ex) {
+      log.error(ex.getMessage(), ex);
+      return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+    }
+  }
 }

@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,11 +19,11 @@ import ch.akros.marketplace.AkrosMarketplacedataServiceApplication;
 @TestPropertySource("classpath:postgres_db_url.properties")
 @Transactional
 public class FieldTypeDefinitionRepositoryTest {
-	@Autowired
-	private FieldTypeDefinitionRepository fieldTypeDefinitionRepository;
+  @Autowired
+  private FieldTypeDefinitionRepository fieldTypeDefinitionRepository;
 
-	@Test
-	public void allEntriesExistsInFieldTypeDefinition() throws IOException {
-		assertEquals(12, fieldTypeDefinitionRepository.count());
-	}
+  @Test
+  public void allEntriesExistsInFieldTypeDefinition() throws IOException {
+    assertEquals(12, fieldTypeDefinitionRepository.count());
+  }
 }

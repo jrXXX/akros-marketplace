@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.service;
 
 import java.util.List;
@@ -7,25 +8,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import ch.akros.marketplace.api.model.FieldTypeDefinitionDTO;
+import ch.akros.marketplace.api.model.FieldTypeDefinitionResponseDTO;
 import ch.akros.marketplace.entity.FieldTypeDefinition;
 import ch.akros.marketplace.repository.FieldTypeDefinitionRepository;
 
 @Service
 public class FieldTypeDefinitionService {
-	@Autowired
-	private FieldTypeDefinitionRepository fieldTypeDefinitionRepository;
+  @Autowired
+  private FieldTypeDefinitionRepository fieldTypeDefinitionRepository;
 
-	public List<FieldTypeDefinitionDTO> listFieldTypeDefinitions() {
-		return fieldTypeDefinitionRepository.findAll(Sort.by(Sort.Direction.ASC, "fieldTypeDefinitionId")).stream()
-				.map(this::toFieldTypeDefinitionDTO).collect(Collectors.toList());
-	}
+  public List<FieldTypeDefinitionResponseDTO> listFieldTypeDefinitions() {
+    return fieldTypeDefinitionRepository.findAll(Sort.by(Sort.Direction.ASC, "fieldTypeDefinitionId"))
+                                        .stream()
+                                        .map(this::toFieldTypeDefinitionResponseDTO)
+                                        .collect(Collectors.toList());
+  }
 
-	// TODO : mapper
-	private FieldTypeDefinitionDTO toFieldTypeDefinitionDTO(FieldTypeDefinition fieldTypeDefinition) {
-		FieldTypeDefinitionDTO result = new FieldTypeDefinitionDTO();
-		result.setFieldTypeDefinitionId(fieldTypeDefinition.getFieldTypeDefinitionId());
-		result.setDescription(fieldTypeDefinition.getDescription());
-		return result;
-	}
+  private FieldTypeDefinitionResponseDTO toFieldTypeDefinitionResponseDTO(FieldTypeDefinition fieldTypeDefinition) {
+    FieldTypeDefinitionResponseDTO result = new FieldTypeDefinitionResponseDTO();
+    result.setFieldTypeDefinitionId(fieldTypeDefinition.getFieldTypeDefinitionId());
+    result.setDescription(fieldTypeDefinition.getDescription());
+    return result;
+  }
 }

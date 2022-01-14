@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.entity;
 
 import javax.persistence.Column;
@@ -15,14 +16,14 @@ import lombok.Setter;
 @Getter
 @Table(name = "KANTON")
 public class Kanton {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "KANTON_ID")
-	private Long kantonId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "KANTON_ID")
+  private Long   kantonId;
 
-	@Column(name = "NAME")
-	private String name;
+  @Column(name = "NAME")
+  private String name;
 
-	@Column(name = "SHORT_NAME")
-	private String shortName;
+  @Column(name = "SHORT_NAME")
+  private String shortName;
 }

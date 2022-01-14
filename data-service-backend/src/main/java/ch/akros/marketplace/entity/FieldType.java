@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.entity;
 
 import java.util.List;
@@ -25,48 +26,50 @@ import lombok.ToString;
 @Table(name = "FIELD_TYPE")
 @Entity(name = "fieldType")
 public class FieldType {
-	@Id
-	@Column(name = "FIELD_TYPE_ID", unique = true)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long fieldTypeId;
+  @Id
+  @Column(name = "FIELD_TYPE_ID", unique = true)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long                  fieldTypeId;
 
-	@ManyToOne
-	@ToString.Exclude
-	@JoinColumn(referencedColumnName = "THEME_ID", name = "THEME_ID", foreignKey = @ForeignKey(name = "FIELD_TYPE_THEME_FK"))
-	private Theme theme;
+  @ManyToOne
+  @ToString.Exclude
+  @JoinColumn(referencedColumnName = "THEME_ID", name = "THEME_ID",
+      foreignKey = @ForeignKey(name = "FIELD_TYPE_THEME_FK"))
+  private Theme                 theme;
 
-	@Column(name = "DESCRIPTION")
-	private String description;
+  @Column(name = "DESCRIPTION")
+  private String                description;
 
-	@Column(name = "SHORT_DESCRIPTION")
-	private String shortDescription;
+  @Column(name = "SHORT_DESCRIPTION")
+  private String                shortDescription;
 
-	@Column(name = "MIN_VALUE")
-	private int minValue;
+  @Column(name = "MIN_VALUE")
+  private int                   minValue;
 
-	@Column(name = "MAX_VALUE")
-	private int maxValue;
+  @Column(name = "MAX_VALUE")
+  private int                   maxValue;
 
-	@Column(name = "SORT_NUMBER")
-	private int sortNumber;
+  @Column(name = "SORT_NUMBER")
+  private int                   sortNumber;
 
-	@Column(name = "REQUIRED")
-	private boolean required;
+  @Column(name = "REQUIRED")
+  private boolean               required;
 
-	@Column(name = "SEARCHABLE")
-	private boolean searchable;
+  @Column(name = "SEARCHABLE")
+  private boolean               searchable;
 
-	@Column(name = "SEARCH")
-	private boolean search;
+  @Column(name = "SEARCH")
+  private boolean               search;
 
-	@Column(name = "OFFER")
-	private boolean offer;
+  @Column(name = "OFFER")
+  private boolean               offer;
 
-	@OneToMany(mappedBy = "fieldType", cascade = CascadeType.ALL)
-	private List<FieldTypeChoose> fieldTypeChooses;
-	
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(referencedColumnName = "FIELD_TYPE_DEFINITION_ID", name = "FIELD_TYPE_DEFINITION_ID", foreignKey = @ForeignKey(name = "FIELD_TYPE_FIELD_TYPE_DEFINITION_FK"))
-	@ToString.Exclude
-	private FieldTypeDefinition fieldTypeDefinition;
+  @OneToMany(mappedBy = "fieldType", cascade = CascadeType.ALL)
+  private List<FieldTypeChoose> fieldTypeChooses;
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(referencedColumnName = "FIELD_TYPE_DEFINITION_ID", name = "FIELD_TYPE_DEFINITION_ID",
+      foreignKey = @ForeignKey(name = "FIELD_TYPE_FIELD_TYPE_DEFINITION_FK"))
+  @ToString.Exclude
+  private FieldTypeDefinition   fieldTypeDefinition;
 }

@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.repository;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -20,12 +21,12 @@ import ch.akros.marketplace.entity.VWTheme;
 @TestPropertySource("classpath:postgres_db_url.properties")
 @Transactional
 public class VWThemeRepositoryTest {
-	@Autowired
-	private VWThemeRepository vwThemeRepository;
+  @Autowired
+  private VWThemeRepository vwThemeRepository;
 
-	@Test
-	public void allEntriesExistsInFieldTypeDefinition() throws IOException {
-		List<VWTheme> vwThemeList = vwThemeRepository.findAll();
-		assertTrue(vwThemeList.size() > 0);
-	}
+  @Test
+  public void allEntriesExistsInFieldTypeDefinition() throws IOException {
+    List<VWTheme> vwThemeList = vwThemeRepository.findAll();
+    assertTrue(vwThemeList.size() > 0);
+  }
 }

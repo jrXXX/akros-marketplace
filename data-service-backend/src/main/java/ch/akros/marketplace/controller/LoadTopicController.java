@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.akros.marketplace.api.LoadTopicApi;
-import ch.akros.marketplace.api.model.TopicLoadDTO;
+import ch.akros.marketplace.api.model.TopicLoadResponseDTO;
 import ch.akros.marketplace.service.TopicService;
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,19 +16,20 @@ import lombok.extern.slf4j.Slf4j;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
 public class LoadTopicController implements LoadTopicApi {
-	@Autowired
-	private TopicService topicService;
+  @Autowired
+  private TopicService topicService;
 
-	@Override
-	public ResponseEntity<TopicLoadDTO> loadTopicTopicIdGet(Long topicId) {
-		try {
-			log.debug("SaveTopicController.saveTopicPost() called");
+  @Override
+  public ResponseEntity<TopicLoadResponseDTO> loadTopicTopicIdGet(Long topicId) {
+    try {
+      log.debug("LoadTopicController.loadTopicTopicIdGet() called");
 
-			TopicLoadDTO topic = topicService.loadTopic(topicId);
-			return ResponseEntity.status(HttpStatus.OK).body(topic);
-		} catch (Exception ex) {
-			log.error(ex.getMessage(), ex);
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-		}
-	}
+      TopicLoadResponseDTO topic = topicService.loadTopic(topicId);
+      return ResponseEntity.status(HttpStatus.OK).body(topic);
+    }
+    catch (Exception ex) {
+      log.error(ex.getMessage(), ex);
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+    }
+  }
 }

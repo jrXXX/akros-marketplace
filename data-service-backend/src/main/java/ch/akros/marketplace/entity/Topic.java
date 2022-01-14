@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.entity;
 
 import java.time.LocalDate;
@@ -33,30 +34,31 @@ import lombok.ToString;
 @ToString
 @Table(name = "TOPIC")
 public class Topic {
-	@Id
-	@Column(name = "TOPIC_ID", unique = true)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long topicId;
+  @Id
+  @Column(name = "TOPIC_ID", unique = true)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long             topicId;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(referencedColumnName = "ADVERTISER_ID", name = "ADVERTISER_ID", foreignKey = @ForeignKey(name = "TOPIC_ADVERTISER_FK"))
-	@ToString.Exclude
-	private Advertiser advertiser;
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(referencedColumnName = "ADVERTISER_ID", name = "ADVERTISER_ID",
+      foreignKey = @ForeignKey(name = "TOPIC_ADVERTISER_FK"))
+  @ToString.Exclude
+  private Advertiser       advertiser;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(referencedColumnName = "THEME_ID", name = "THEME_ID", foreignKey = @ForeignKey(name = "TOPIC_THEME_FK"))
-	@ToString.Exclude
-	private Theme theme;
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(referencedColumnName = "THEME_ID", name = "THEME_ID", foreignKey = @ForeignKey(name = "TOPIC_THEME_FK"))
+  @ToString.Exclude
+  private Theme            theme;
 
-	@Column(name = "VALID_FROM")
-	private LocalDate validFrom;
+  @Column(name = "VALID_FROM")
+  private LocalDate        validFrom;
 
-	@Column(name = "VALID_TO")
-	private LocalDate validTo;
+  @Column(name = "VALID_TO")
+  private LocalDate        validTo;
 
-	@OneToMany(mappedBy = "topic", cascade = CascadeType.ALL)
-	private List<TopicValue> topicValues;
+  @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL)
+  private List<TopicValue> topicValues;
 
-	@Column(name = "SEARCH_OR_OFFER")
-	private String searchOrOffer;
+  @Column(name = "SEARCH_OR_OFFER")
+  private String           searchOrOffer;
 }

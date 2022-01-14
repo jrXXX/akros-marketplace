@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.entity;
 
 import java.util.List;
@@ -21,17 +22,17 @@ import lombok.ToString;
 @ToString
 @Table(name = "THEME")
 public class Theme {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "THEME_ID")
-	private Long themeId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "THEME_ID")
+  private Long            themeId;
 
-	@Column(name = "DESCRIPTION")
-	private String description;
+  @Column(name = "DESCRIPTION")
+  private String          description;
 
-	@Column(name = "SHORT_DESCRIPTION")
-	private String shortDescription;
+  @Column(name = "SHORT_DESCRIPTION")
+  private String          shortDescription;
 
-	@OneToMany(mappedBy = "theme", cascade = CascadeType.ALL)
-	private List<FieldType> fieldTypes;
+  @OneToMany(mappedBy = "theme", cascade = CascadeType.ALL)
+  private List<FieldType> fieldTypes;
 }

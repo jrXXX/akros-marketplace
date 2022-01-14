@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.entity;
 
 import javax.persistence.Column;
@@ -19,11 +20,11 @@ import lombok.ToString;
 @ToString
 @Table(name = "FIELD_TYPE_DEFINITION")
 public class FieldTypeDefinition {
-	@Id
-	@Column(name = "FIELD_TYPE_DEFINITION_ID", unique = true)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long fieldTypeDefinitionId;
+  @Id
+  @Column(name = "FIELD_TYPE_DEFINITION_ID", unique = true)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long   fieldTypeDefinitionId;
 
-	@Column(name = "DESCRIPTION")
-	private String description;
+  @Column(name = "DESCRIPTION")
+  private String description;
 }

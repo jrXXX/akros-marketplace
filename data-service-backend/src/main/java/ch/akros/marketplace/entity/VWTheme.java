@@ -1,3 +1,4 @@
+
 package ch.akros.marketplace.entity;
 
 import javax.persistence.Column;
@@ -19,17 +20,17 @@ import lombok.ToString;
 @ToString
 @Table(name = "VW_THEME")
 public class VWTheme {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "THEME_ID")
-	private Long themeId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "THEME_ID")
+  private Long   themeId;
 
-	@Column(name = "DESCRIPTION")
-	private String description;
+  @Column(name = "DESCRIPTION")
+  private String description;
 
-	@Column(name = "SEARCH_COUNT")
-	private int searchCount;
+  @Column(name = "SEARCH_COUNT")
+  private int    searchCount;
 
-	@Column(name = "OFFER_COUNT")
-	private int offerCount;
+  @Column(name = "OFFER_COUNT")
+  private int    offerCount;
 }
