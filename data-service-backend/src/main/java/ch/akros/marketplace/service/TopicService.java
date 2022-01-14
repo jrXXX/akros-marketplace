@@ -143,6 +143,6 @@ public class TopicService {
 	}
 
 	public void deleteTopic(Long topicId) {
-		topicRepository.delete(topicRepository.getById(topicId));
+		topicRepository.deleteById(topicId);
 	}
 }
