@@ -1,5 +1,5 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  width="1488" height="920">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  width="1141" height="902">
 <defs id="dmw_defs" >
 <svg id="fk_sym" viewBox="0 0 48.665 48.665" style="enable-background:new 0 0 48.665 48.665;" >
 <g>
@@ -22,82 +22,134 @@
 <path fill="black" d="M660.224 422.656c6.976 16.192-0.512 35.008-16.768 42.048-16.128 6.976-34.944-0.448-41.984-16.768-8.448-19.776-20.736-37.696-36.224-53.248-64.64-64.64-177.344-64.64-241.92 0l-145.216 145.28c-66.688 66.688-66.688 175.232 0 241.984 66.688 66.688 175.104 66.752 241.92 0l92.8-92.864c12.48-12.48 32.768-12.48 45.248 0s12.48 32.768 0 45.248l-92.8 92.864c-91.648 91.648-240.832 91.52-332.416 0-91.712-91.648-91.712-240.832 0-332.48l145.216-145.28c44.352-44.416 103.424-68.864 166.272-68.864s121.792 24.448 166.208 68.864c21.248 21.312 38.016 45.952 49.664 73.216zM891.136 401.344l-145.216 145.216c-88.768 88.832-243.712 88.832-332.416 0-21.312-21.312-38.080-45.952-49.728-73.216-7.040-16.256 0.448-35.072 16.704-42.048 16.064-6.784 35.008 0.512 41.984 16.768 8.512 19.776 20.8 37.696 36.288 53.248 64.64 64.64 177.344 64.64 241.92 0l145.216-145.216c66.688-66.688 66.688-175.232 0-241.984-66.752-66.624-175.168-66.688-241.92 0l-92.8 92.864c-12.48 12.48-32.768 12.48-45.248 0s-12.48-32.768 0-45.248l92.8-92.864c45.824-45.824 105.984-68.736 166.208-68.736s120.448 22.912 166.272 68.736c91.584 91.648 91.584 240.768-0.064 332.48z" />
 </g>
 </svg>
-<clipPath clipPathUnits="userSpaceOnUse" id="clipPath7_0_">
-<rect x="0" y="0" width="230" height="102" />
+<clipPath clipPathUnits="userSpaceOnUse" id="clipPath12_0_">
+<rect x="0" y="0" width="271" height="118" />
 </clipPath>
-<clipPath clipPathUnits="userSpaceOnUse" id="clipPath2_0_">
-<rect x="0" y="0" width="243" height="160" />
-</clipPath>
-<clipPath clipPathUnits="userSpaceOnUse" id="clipPath10_0_">
-<rect x="0" y="0" width="253" height="199" />
-</clipPath>
-<clipPath clipPathUnits="userSpaceOnUse" id="clipPath3_0_">
+<clipPath clipPathUnits="userSpaceOnUse" id="clipPath4_0_">
 <rect x="0" y="0" width="237" height="128" />
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath8_0_">
-<rect x="0" y="0" width="271" height="102" />
-</clipPath>
-<clipPath clipPathUnits="userSpaceOnUse" id="clipPath4_0_">
-<rect x="0" y="0" width="358" height="225" />
-</clipPath>
-<clipPath clipPathUnits="userSpaceOnUse" id="clipPath6_0_">
 <rect x="0" y="0" width="301" height="89" />
 </clipPath>
-<clipPath clipPathUnits="userSpaceOnUse" id="clipPath5_0_">
-<rect x="0" y="0" width="285" height="134" />
+<clipPath clipPathUnits="userSpaceOnUse" id="clipPath3_0_">
+<rect x="0" y="0" width="243" height="160" />
+</clipPath>
+<clipPath clipPathUnits="userSpaceOnUse" id="clipPath10_0_">
+<rect x="0" y="0" width="243" height="173" />
+</clipPath>
+<clipPath clipPathUnits="userSpaceOnUse" id="clipPath11_0_">
+<rect x="0" y="0" width="253" height="212" />
+</clipPath>
+<clipPath clipPathUnits="userSpaceOnUse" id="clipPath6_0_">
+<rect x="0" y="0" width="358" height="264" />
 </clipPath>
 <clipPath clipPathUnits="userSpaceOnUse" id="clipPath9_0_">
-<rect x="0" y="0" width="225" height="160" />
+<rect x="0" y="0" width="230" height="102" />
+</clipPath>
+<clipPath clipPathUnits="userSpaceOnUse" id="clipPath7_0_">
+<rect x="0" y="0" width="285" height="134" />
+</clipPath>
+<clipPath clipPathUnits="userSpaceOnUse" id="clipPath5_0_">
+<rect x="0" y="0" width="271" height="102" />
 </clipPath>
 </defs>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M532 297 L532 499" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="532 297 535 303 529 303" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M526.0 499.0 L532.0 487.0 L538.0 499.0 M526.0 486.4000005722046 L538.0 486.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M1010 128 L1010 171" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1010 128 1013 134 1007 134" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M1004.0 171.0 L1010.0 159.0 L1016.0 171.0 M1004.0 158.4000005722046 L1016.0 158.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M668 260 L906 260" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="668 260 674 257 674 263" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M906.0 266.0 L894.0 260.0 L906.0 254.0 M893.4000005722046 266.0 L893.4000005722046 254.0" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M1011 344 L1011 387" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1011 344 1014 350 1008 350" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M1005.0 387.0 L1011.0 375.0 L1017.0 387.0 M1005.0 374.4000005722046 L1017.0 374.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M1370 508 L1370 427" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1370 508 1367 502 1373 502" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M1376.0 427.0 L1370.0 439.0 L1364.0 427.0 M1376.0 439.5999994277954 L1364.0 439.5999994277954" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M561 298 L561 366" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="561 298 564 304 558 304" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M555.0 366.0 L561.0 354.0 L567.0 366.0 M555.0 353.4000005722046 L567.0 353.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M610 297 L897 485" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="610 297 616 298 614 302" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M894.0 490.0 L887.0 479.0 L900.0 480.0 M883.5 483.7000002861023 L889.5 473.7000002861023" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M697 247 L890 247" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="697 247 703 244 703 250" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M890.0 253.0 L878.0 247.0 L890.0 241.0 M877.4000005722046 253.0 L877.4000005722046 241.0" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M428 434 L428 499" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="428 434 431 440 425 440" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M422.0 499.0 L428.0 487.0 L434.0 499.0 M422.0 486.4000005722046 L434.0 486.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M158 636 L158 742" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="158 636 161 642 155 642" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M152.0 742.0 L158.0 730.0 L164.0 742.0 M152.0 729.4000005722046 L164.0 729.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M1018 169 L1018 223" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1018 169 1021 175 1015 175" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M1012.0 223.0 L1018.0 211.0 L1024.0 223.0 M1012.0 210.4000005722046 L1024.0 210.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M540 630 L540 674" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="540 630 543 636 537 636" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M534.0 674.0 L540.0 662.0 L546.0 674.0 M534.0 661.4000005722046 L546.0 661.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M557 724 L557 786" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="557 724 560 730 554 730" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M551.0 786.0 L557.0 774.0 L563.0 786.0 M551.0 773.4000005722046 L563.0 773.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M655 298 L888 424" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="655 298 661 298 659 302" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M886.0 429.0 L878.0 420.0 L890.0 419.0 M875.5 424.80000019073486 L879.5 414.80000019073486" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M1018 383 L1018 469" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1018 383 1021 389 1015 389" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M1012.0 469.0 L1018.0 457.0 L1024.0 469.0 M1012.0 456.4000005722046 L1024.0 456.4000005722046" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M723 493 L888 493" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="723 493 729 490 729 496" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M888.0 499.0 L876.0 493.0 L888.0 487.0 M875.4000005722046 499.0 L875.4000005722046 487.0" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
 <g stroke-linecap="butt" >
-<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M747 583 L897 583" />
-<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="747 583 753 580 753 586" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
-<path stroke-dasharray="none" d="M897.0 589.0 L885.0 583.0 L897.0 577.0 M884.4000005722046 589.0 L884.4000005722046 577.0" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
+<path stroke="rgb(0,0,0)" fill="none" stroke-opacity="1.0"  stroke-width="1" d="M305 413 L365 413" />
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="305 413 311 410 311 416" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="1.0"  />
+<path stroke-dasharray="none" d="M365.0 419.0 L353.0 413.0 L365.0 407.0 M352.4000005722046 419.0 L352.4000005722046 407.0" fill="white" stroke-width="1" stroke-opacity="1.0" stroke="rgb(0,0,0)" />
 </g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath6_0_)" transform="translate(167,345)" >
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath5_0_)" transform="translate(426,196)" >
+<rect x="0" y="0" width="270" height="101" />
+<text id="E4C2C6E1-7CB6FA570D91" x="78" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+AKROS_MA.CATEGORY
+</text>
+<line x1="0" y1="17" x2="269" y2="17" fill="none" stroke="rgb(0,0,255)"/>
+<text x="16" y="30" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="2" y="30" fill="rgb(0,0,255)" fill-opacity="1.0" font-size="10" stroke="none">
+P
+</text>
+<text x="26" y="30" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+CATEGORY_ID
+</text>
+<text x="146" y="30" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER (9)
+</text>
+<text x="16" y="43" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="26" y="43" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+DESCRIPTION
+</text>
+<text x="146" y="43" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+VARCHAR2 (1000 BYTE)
+</text>
+<text x="16" y="56" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="26" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+SHORT_DESCRIPTION
+</text>
+<text x="146" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+VARCHAR2 (100 BYTE)
+</text>
+<line x1="0" y1="62" x2="269" y2="62" fill="none" stroke="rgb(0,0,255)"/>
+<use xlink:href="#pk_sym" x="4" y="69" width="8" height="8" fill-opacity="1.0"/>
+<text x="16" y="75" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+CATEGORY_PK (CATEGORY_ID)
+</text>
+<line x1="0" y1="81" x2="269" y2="81" fill="none" stroke="rgb(0,0,255)"/>
+<text x="2" y="94" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+U
+</text>
+<text x="16" y="94" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+CATEGORY_PK (CATEGORY_ID)
+</text>
+</g>
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath8_0_)" transform="translate(4,369)" >
 <rect x="0" y="0" width="300" height="88" />
-<text id="E8A76BB8-339945F8EAB6" x="59" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+<text id="ACFF0C24-7366687080AF" x="59" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
 AKROS_MA.FIELD_TYPE_DEFINITION
 </text>
 <line x1="0" y1="17" x2="299" y2="17" fill="none" stroke="rgb(0,0,255)"/>
@@ -135,107 +187,9 @@ U
 FIELD_TYPE_DEFINITION_PK (FIELD_TYPE_DEFINITION_ID)
 </text>
 </g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath7_0_)" transform="translate(1255,508)" >
-<rect x="0" y="0" width="229" height="101" />
-<text id="0FD21AA9-45722E9582BB" x="63" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
-AKROS_MA.KANTON
-</text>
-<line x1="0" y1="17" x2="228" y2="17" fill="none" stroke="rgb(0,0,255)"/>
-<text x="16" y="30" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-*
-</text>
-<text x="2" y="30" fill="rgb(0,0,255)" fill-opacity="1.0" font-size="10" stroke="none">
-P
-</text>
-<text x="26" y="30" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-KANTON_ID
-</text>
-<text x="111" y="30" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-NUMBER (9)
-</text>
-<text x="16" y="43" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-*
-</text>
-<text x="26" y="43" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-NAME
-</text>
-<text x="111" y="43" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-VARCHAR2 (100 BYTE)
-</text>
-<text x="16" y="56" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-*
-</text>
-<text x="26" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-SHORT_NAME
-</text>
-<text x="111" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-VARCHAR2 (2 BYTE)
-</text>
-<line x1="0" y1="62" x2="228" y2="62" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#pk_sym" x="4" y="69" width="8" height="8" fill-opacity="1.0"/>
-<text x="16" y="75" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-KANTON_PK (KANTON_ID)
-</text>
-<line x1="0" y1="81" x2="228" y2="81" fill="none" stroke="rgb(0,0,255)"/>
-<text x="2" y="94" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-U
-</text>
-<text x="16" y="94" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-KANTON_PK (KANTON_ID)
-</text>
-</g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath8_0_)" transform="translate(397,195)" >
-<rect x="0" y="0" width="270" height="101" />
-<text id="711975CF-8CF8D767DCAF" x="88" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
-AKROS_MA.THEME
-</text>
-<line x1="0" y1="17" x2="269" y2="17" fill="none" stroke="rgb(0,0,255)"/>
-<text x="16" y="30" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-*
-</text>
-<text x="2" y="30" fill="rgb(0,0,255)" fill-opacity="1.0" font-size="10" stroke="none">
-P
-</text>
-<text x="26" y="30" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-THEME_ID
-</text>
-<text x="146" y="30" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-NUMBER (9)
-</text>
-<text x="16" y="43" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-*
-</text>
-<text x="26" y="43" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-DESCRIPTION
-</text>
-<text x="146" y="43" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-VARCHAR2 (1000 BYTE)
-</text>
-<text x="16" y="56" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-*
-</text>
-<text x="26" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-SHORT_DESCRIPTION
-</text>
-<text x="146" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-VARCHAR2 (100 BYTE)
-</text>
-<line x1="0" y1="62" x2="269" y2="62" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#pk_sym" x="4" y="69" width="8" height="8" fill-opacity="1.0"/>
-<text x="16" y="75" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-THEME_PK (THEME_ID)
-</text>
-<line x1="0" y1="81" x2="269" y2="81" fill="none" stroke="rgb(0,0,255)"/>
-<text x="2" y="94" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-U
-</text>
-<text x="16" y="94" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-THEME_PK (THEME_ID)
-</text>
-</g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath3_0_)" transform="translate(900,41)" >
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath4_0_)" transform="translate(892,0)" >
 <rect x="0" y="0" width="236" height="127" />
-<text id="3D7FFBF9-12EF18693ABD" x="57" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+<text id="2EE806B7-9FAC4CD45B05" x="57" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
 AKROS_MA.ADVERTISER
 </text>
 <line x1="0" y1="17" x2="235" y2="17" fill="none" stroke="rgb(0,0,255)"/>
@@ -300,12 +254,12 @@ U
 ADVERTISER_PK (ADVERTISER_ID)
 </text>
 </g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath9_0_)" transform="translate(906,223)" >
-<rect x="0" y="0" width="224" height="159" />
-<text id="F4650908-291B794BE1EA" x="68" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath10_0_)" transform="translate(890,171)" >
+<rect x="0" y="0" width="242" height="172" />
+<text id="C03FE001-7BE6502ABCDB" x="77" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
 AKROS_MA.TOPIC
 </text>
-<line x1="0" y1="17" x2="223" y2="17" fill="none" stroke="rgb(0,0,255)"/>
+<line x1="0" y1="17" x2="241" y2="17" fill="none" stroke="rgb(0,0,255)"/>
 <text x="16" y="30" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 *
 </text>
@@ -315,7 +269,7 @@ P
 <text x="26" y="30" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 TOPIC_ID
 </text>
-<text x="118" y="30" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="136" y="30" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 NUMBER (9)
 </text>
 <text x="16" y="43" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
@@ -327,7 +281,7 @@ F
 <text x="26" y="43" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 ADVERTISER_ID
 </text>
-<text x="118" y="43" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="136" y="43" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 NUMBER (9)
 </text>
 <text x="16" y="56" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
@@ -337,9 +291,9 @@ NUMBER (9)
 F
 </text>
 <text x="26" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-THEME_ID
+CATEGORY_ID
 </text>
-<text x="118" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="136" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 NUMBER (9)
 </text>
 <text x="16" y="69" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
@@ -348,7 +302,7 @@ NUMBER (9)
 <text x="26" y="69" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 VALID_FROM
 </text>
-<text x="118" y="69" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="136" y="69" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 DATE
 </text>
 <text x="16" y="82" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
@@ -357,34 +311,43 @@ DATE
 <text x="26" y="82" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 VALID_TO
 </text>
-<text x="118" y="82" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="136" y="82" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 DATE
 </text>
-<line x1="0" y1="88" x2="223" y2="88" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#pk_sym" x="4" y="95" width="8" height="8" fill-opacity="1.0"/>
-<text x="16" y="101" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="16" y="95" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="26" y="95" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+SEARCH_OR_OFFER
+</text>
+<text x="136" y="95" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+VARCHAR2 (5 BYTE)
+</text>
+<line x1="0" y1="101" x2="241" y2="101" fill="none" stroke="rgb(0,0,255)"/>
+<use xlink:href="#pk_sym" x="4" y="108" width="8" height="8" fill-opacity="1.0"/>
+<text x="16" y="114" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 TOPIC_PK (TOPIC_ID)
 </text>
-<line x1="0" y1="107" x2="223" y2="107" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#fk_sym" x="4" y="114" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#3D7FFBF9-12EF18693ABD" >
-<text x="16" y="120" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<line x1="0" y1="120" x2="241" y2="120" fill="none" stroke="rgb(0,0,255)"/>
+<use xlink:href="#fk_sym" x="4" y="127" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#2EE806B7-9FAC4CD45B05" >
+<text x="16" y="133" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 TOPIC_ADVERTISER_FK (ADVERTISER_ID)
 </text></a>
-<use xlink:href="#fk_sym" x="4" y="127" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#711975CF-8CF8D767DCAF" >
-<text x="16" y="133" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-TOPIC_THEME_FK (THEME_ID)
+<use xlink:href="#fk_sym" x="4" y="140" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#E4C2C6E1-7CB6FA570D91" >
+<text x="16" y="146" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+TOPIC_CATEGORY_FK (CATEGORY_ID)
 </text></a>
-<line x1="0" y1="139" x2="223" y2="139" fill="none" stroke="rgb(0,0,255)"/>
-<text x="2" y="152" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<line x1="0" y1="152" x2="241" y2="152" fill="none" stroke="rgb(0,0,255)"/>
+<text x="2" y="165" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 U
 </text>
-<text x="16" y="152" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="16" y="165" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 TOPIC_PK (TOPIC_ID)
 </text>
 </g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath10_0_)" transform="translate(897,469)" >
-<rect x="0" y="0" width="252" height="198" />
-<text id="1FDE8D27-851C02757185" x="63" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath11_0_)" transform="translate(888,387)" >
+<rect x="0" y="0" width="252" height="211" />
+<text id="C7C9DFED-41F99603C4B0" x="63" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
 AKROS_MA.TOPIC_VALUE
 </text>
 <line x1="0" y1="17" x2="251" y2="17" fill="none" stroke="rgb(0,0,255)"/>
@@ -419,7 +382,7 @@ NUMBER (9)
 F
 </text>
 <text x="26" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-THEME_ID
+CATEGORY_ID
 </text>
 <text x="127" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 NUMBER (9)
@@ -463,35 +426,44 @@ VALUE_DATE
 <text x="127" y="108" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 DATE
 </text>
-<line x1="0" y1="114" x2="251" y2="114" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#pk_sym" x="4" y="121" width="8" height="8" fill-opacity="1.0"/>
-<text x="16" y="127" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="16" y="121" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+
+</text>
+<text x="26" y="121" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+VALUE_BOOLEAN
+</text>
+<text x="127" y="121" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER (1)
+</text>
+<line x1="0" y1="127" x2="251" y2="127" fill="none" stroke="rgb(0,0,255)"/>
+<use xlink:href="#pk_sym" x="4" y="134" width="8" height="8" fill-opacity="1.0"/>
+<text x="16" y="140" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 TOPIC_VALUE_PK (TOPIC_VALUE_ID)
 </text>
-<line x1="0" y1="133" x2="251" y2="133" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#fk_sym" x="4" y="140" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#857AC068-E421DF81F8E5" >
-<text x="16" y="146" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<line x1="0" y1="146" x2="251" y2="146" fill="none" stroke="rgb(0,0,255)"/>
+<use xlink:href="#fk_sym" x="4" y="153" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#E4C2C6E1-7CB6FA570D91" >
+<text x="16" y="159" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+TOPIC_VALUE_CATEGORY_FK (CATEGORY_ID)
+</text></a>
+<use xlink:href="#fk_sym" x="4" y="166" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#CBF1AFA2-667BC697A7CD" >
+<text x="16" y="172" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 TOPIC_VALUE_FIELD_TYPE_FK (FIELD_TYPE_ID)
 </text></a>
-<use xlink:href="#fk_sym" x="4" y="153" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#711975CF-8CF8D767DCAF" >
-<text x="16" y="159" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-TOPIC_VALUE_THEME_FK (THEME_ID)
-</text></a>
-<use xlink:href="#fk_sym" x="4" y="166" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#F4650908-291B794BE1EA" >
-<text x="16" y="172" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<use xlink:href="#fk_sym" x="4" y="179" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#C03FE001-7BE6502ABCDB" >
+<text x="16" y="185" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 TOPIC_VALUE_TOPIC_FK (TOPIC_ID)
 </text></a>
-<line x1="0" y1="178" x2="251" y2="178" fill="none" stroke="rgb(0,0,255)"/>
-<text x="2" y="191" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<line x1="0" y1="191" x2="251" y2="191" fill="none" stroke="rgb(0,0,255)"/>
+<text x="2" y="204" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 U
 </text>
-<text x="16" y="191" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="16" y="204" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 TOPIC_VALUE_PK (TOPIC_VALUE_ID)
 </text>
 </g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath5_0_)" transform="translate(415,786)" >
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath7_0_)" transform="translate(398,674)" >
 <rect x="0" y="0" width="284" height="133" />
-<text id="EBEBAE8B-B8BCAF034A10" x="59" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+<text id="DE038867-76BF6F4BCDF4" x="59" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
 AKROS_MA.FIELD_TYPE_CHOOSE
 </text>
 <line x1="0" y1="17" x2="283" y2="17" fill="none" stroke="rgb(0,0,255)"/>
@@ -543,7 +515,7 @@ NUMBER (9)
 FIELD_TYPE_CHOOSE_PK (FIELD_TYPE_CHOOSE_ID)
 </text>
 <line x1="0" y1="94" x2="283" y2="94" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#fk_sym" x="4" y="101" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#857AC068-E421DF81F8E5" >
+<use xlink:href="#fk_sym" x="4" y="101" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#CBF1AFA2-667BC697A7CD" >
 <text x="16" y="107" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 FIELD_TYPE_CHOOSE_FIELD_TYPE_FK (FIELD_TYPE_ID)
 </text></a>
@@ -555,9 +527,9 @@ U
 FIELD_TYPE_CHOOSE_PK (FIELD_TYPE_CHOOSE_ID)
 </text>
 </g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath4_0_)" transform="translate(389,499)" >
-<rect x="0" y="0" width="357" height="224" />
-<text id="857AC068-E421DF81F8E5" x="120" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath6_0_)" transform="translate(365,366)" >
+<rect x="0" y="0" width="357" height="263" />
+<text id="CBF1AFA2-667BC697A7CD" x="120" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
 AKROS_MA.FIELD_TYPE
 </text>
 <line x1="0" y1="17" x2="356" y2="17" fill="none" stroke="rgb(0,0,255)"/>
@@ -580,7 +552,7 @@ NUMBER (9)
 F
 </text>
 <text x="26" y="43" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-THEME_ID
+FIELD_TYPE_DEFINITION_ID
 </text>
 <text x="173" y="43" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 NUMBER (9)
@@ -588,35 +560,38 @@ NUMBER (9)
 <text x="16" y="56" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 *
 </text>
+<text x="2" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+F
+</text>
 <text x="26" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-DESCRIPTION
+CATEGORY_ID
 </text>
 <text x="173" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-VARCHAR2 (1000 BYTE)
+NUMBER (9)
 </text>
 <text x="16" y="69" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 *
 </text>
 <text x="26" y="69" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-SHORT_DESCRIPTION
+DESCRIPTION
 </text>
 <text x="173" y="69" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-VARCHAR2 (100 BYTE)
+VARCHAR2 (1000 BYTE)
 </text>
 <text x="16" y="82" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 *
 </text>
 <text x="26" y="82" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-MIN_VALUE
+SHORT_DESCRIPTION
 </text>
 <text x="173" y="82" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-NUMBER (9)
+VARCHAR2 (100 BYTE)
 </text>
 <text x="16" y="95" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 *
 </text>
 <text x="26" y="95" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-MAX_VALUE
+MIN_VALUE
 </text>
 <text x="173" y="95" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 NUMBER (9)
@@ -625,7 +600,7 @@ NUMBER (9)
 *
 </text>
 <text x="26" y="108" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-SORT_NUMBER
+MAX_VALUE
 </text>
 <text x="173" y="108" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 NUMBER (9)
@@ -634,16 +609,16 @@ NUMBER (9)
 *
 </text>
 <text x="26" y="121" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-REQUIRED
+SORT_NUMBER
 </text>
 <text x="173" y="121" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-NUMBER (1)
+NUMBER (9)
 </text>
 <text x="16" y="134" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 *
 </text>
 <text x="26" y="134" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-SEARCHABLE
+REQUIRED
 </text>
 <text x="173" y="134" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
 NUMBER (1)
@@ -651,40 +626,113 @@ NUMBER (1)
 <text x="16" y="147" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 *
 </text>
-<text x="2" y="147" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-F
-</text>
 <text x="26" y="147" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-FIELD_TYPE_DEFINITION_ID
+SEARCHABLE
 </text>
 <text x="173" y="147" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
-NUMBER (9)
+NUMBER (1)
 </text>
-<line x1="0" y1="153" x2="356" y2="153" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#pk_sym" x="4" y="160" width="8" height="8" fill-opacity="1.0"/>
-<text x="16" y="166" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="16" y="160" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="26" y="160" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+SEARCH
+</text>
+<text x="173" y="160" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER (1)
+</text>
+<text x="16" y="173" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="26" y="173" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+OFFER
+</text>
+<text x="173" y="173" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER (1)
+</text>
+<text x="16" y="186" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="26" y="186" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+SEARCH_LIST
+</text>
+<text x="173" y="186" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER (1)
+</text>
+<line x1="0" y1="192" x2="356" y2="192" fill="none" stroke="rgb(0,0,255)"/>
+<use xlink:href="#pk_sym" x="4" y="199" width="8" height="8" fill-opacity="1.0"/>
+<text x="16" y="205" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 FIELD_TYPE_PK (FIELD_TYPE_ID)
 </text>
-<line x1="0" y1="172" x2="356" y2="172" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#fk_sym" x="4" y="179" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#E8A76BB8-339945F8EAB6" >
-<text x="16" y="185" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<line x1="0" y1="211" x2="356" y2="211" fill="none" stroke="rgb(0,0,255)"/>
+<use xlink:href="#fk_sym" x="4" y="218" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#E4C2C6E1-7CB6FA570D91" >
+<text x="16" y="224" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+FIELD_TYPE_CATEGORY_FK (CATEGORY_ID)
+</text></a>
+<use xlink:href="#fk_sym" x="4" y="231" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#ACFF0C24-7366687080AF" >
+<text x="16" y="237" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 FIELD_TYPE_FIELD_TYPE_DEFINITION_FK (FIELD_TYPE_DEFINITION_ID)
 </text></a>
-<use xlink:href="#fk_sym" x="4" y="192" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#711975CF-8CF8D767DCAF" >
-<text x="16" y="198" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
-FIELD_TYPE_THEME_FK (THEME_ID)
-</text></a>
-<line x1="0" y1="204" x2="356" y2="204" fill="none" stroke="rgb(0,0,255)"/>
-<text x="2" y="217" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<line x1="0" y1="243" x2="356" y2="243" fill="none" stroke="rgb(0,0,255)"/>
+<text x="2" y="256" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 U
 </text>
-<text x="16" y="217" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+<text x="16" y="256" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 FIELD_TYPE_PK (FIELD_TYPE_ID)
 </text>
 </g>
-<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath2_0_)" transform="translate(1245,267)" >
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath9_0_)" transform="translate(43,534)" >
+<rect x="0" y="0" width="229" height="101" />
+<text id="D0FCD36C-DB45008BEF86" x="63" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+AKROS_MA.KANTON
+</text>
+<line x1="0" y1="17" x2="228" y2="17" fill="none" stroke="rgb(0,0,255)"/>
+<text x="16" y="30" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="2" y="30" fill="rgb(0,0,255)" fill-opacity="1.0" font-size="10" stroke="none">
+P
+</text>
+<text x="26" y="30" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+KANTON_ID
+</text>
+<text x="111" y="30" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER (9)
+</text>
+<text x="16" y="43" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="26" y="43" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NAME
+</text>
+<text x="111" y="43" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+VARCHAR2 (100 BYTE)
+</text>
+<text x="16" y="56" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+*
+</text>
+<text x="26" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+SHORT_NAME
+</text>
+<text x="111" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+VARCHAR2 (2 BYTE)
+</text>
+<line x1="0" y1="62" x2="228" y2="62" fill="none" stroke="rgb(0,0,255)"/>
+<use xlink:href="#pk_sym" x="4" y="69" width="8" height="8" fill-opacity="1.0"/>
+<text x="16" y="75" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+KANTON_PK (KANTON_ID)
+</text>
+<line x1="0" y1="81" x2="228" y2="81" fill="none" stroke="rgb(0,0,255)"/>
+<text x="2" y="94" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+U
+</text>
+<text x="16" y="94" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+KANTON_PK (KANTON_ID)
+</text>
+</g>
+<g  fill="rgb(255,255,180)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath3_0_)" transform="translate(44,742)" >
 <rect x="0" y="0" width="242" height="159" />
-<text id="17F4F00F-D3E8434DBBD6" x="68" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+<text id="B02B195F-BEA2699D966D" x="68" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
 AKROS_MA.ADDRESS
 </text>
 <line x1="0" y1="17" x2="241" y2="17" fill="none" stroke="rgb(0,0,255)"/>
@@ -754,7 +802,7 @@ VARCHAR2 (100 BYTE)
 ADDRESS_PK (ADDRESS_ID)
 </text>
 <line x1="0" y1="120" x2="241" y2="120" fill="none" stroke="rgb(0,0,255)"/>
-<use xlink:href="#fk_sym" x="4" y="127" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#0FD21AA9-45722E9582BB" >
+<use xlink:href="#fk_sym" x="4" y="127" width="8" height="8" fill-opacity="1.0"/><a xlink:href="#D0FCD36C-DB45008BEF86" >
 <text x="16" y="133" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 ADDRESS_KANTON_FK (KANTON_ID)
 </text></a>
@@ -764,6 +812,58 @@ U
 </text>
 <text x="16" y="152" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
 ADDRESS_PK (ADDRESS_ID)
+</text>
+</g>
+<g  fill="rgb(150,255,150)" stroke="rgb(0,0,255)" fill-opacity="1.0" stroke-opacity="1.0" clip-path="url(#clipPath12_0_)" transform="translate(43,188)" >
+<rect x="0" y="0" width="270" height="117" rx="20" ry="20" />
+<text id="16F7C8E7-9D94E99D438C" x="68" y="13" fill="rgb(0,0,255)" font-weight="bold"  fill-opacity="1.0" font-size="10" stroke="none">
+AKROS_MA.VW_CATEGORY
+</text>
+<line x1="0" y1="17" x2="269" y2="17" fill="none" stroke="rgb(0,0,255)"/>
+<text x="16" y="30" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+
+</text>
+<text x="26" y="30" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+CATEGORY_ID
+</text>
+<text x="146" y="30" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER (9)
+</text>
+<text x="16" y="43" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+
+</text>
+<text x="26" y="43" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+SHORT_DESCRIPTION
+</text>
+<text x="146" y="43" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+VARCHAR2 (100 BYTE)
+</text>
+<text x="16" y="56" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+
+</text>
+<text x="26" y="56" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+DESCRIPTION
+</text>
+<text x="146" y="56" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+VARCHAR2 (1000 BYTE)
+</text>
+<text x="16" y="69" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+
+</text>
+<text x="26" y="69" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+SEARCH_COUNT
+</text>
+<text x="146" y="69" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER
+</text>
+<text x="16" y="82" fill="rgb(255,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+
+</text>
+<text x="26" y="82" fill="rgb(0,0,0)" fill-opacity="1.0" font-size="10" stroke="none">
+OFFER_COUNT
+</text>
+<text x="146" y="82" fill="rgb(0,128,0)" fill-opacity="1.0" font-size="10" stroke="none">
+NUMBER
 </text>
 </g>
 
