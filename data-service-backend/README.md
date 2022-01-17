@@ -32,9 +32,9 @@ This module serves the Rest-Services for the UI.
 
 ## Rest Services
 
-| Rest Service End Point | Rest Service Controller  Description |
-| -----------         | ----------- | ----------- |
-| listFieldTypeDefinition  |  list-field-type-definitions-controller | This Rest Service is for documentation purposes only. It lists all static id's to field types for input/search/display UI-Controls. |
+| Rest Service End Point        | Rest Service Controller     | Description     |
+| -----------                   | -----------                 | -----------     |
+| listFieldTypeDefinition       |  list-field-type-definitions-controller | This Rest Service is for documentation purposes only. It lists all static id's to field types for input/search/display UI-Controls. |
 |  listCategories    | list-categories-controller         | Lists all categories. Used in first page. |
 |  listCategorySearchFieldTypes  | list-category-search-field-types-controller         | Lists search fields to a category. Used in first search page to begin search of topics in offers and search requests in the selected category. |
 |  searchTopic  | search-topic-controller         | Lists topics of search result from previous results. |
