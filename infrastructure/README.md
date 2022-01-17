@@ -1,13 +1,13 @@
 # Installing and Running the Infrastructure
 
-### Database only (local/dev)
+## Database only (local/dev)
 
 For Java-Backend-Developers start only the PostGreSQL database to develop the Rest Services.
 
 Use **database_only** folder configuration.
 
 
-### Rest-Services (local/dev)
+## Rest-Services (local/dev)
 
 For Frontend-Developers start the the PostGreSQL database and the Rest Services to develop the frontend functionality.
 
