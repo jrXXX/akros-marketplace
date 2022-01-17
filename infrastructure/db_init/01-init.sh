@@ -6,12 +6,12 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
   \connect $POSTGRES_DB $POSTGRES_USER
   BEGIN;
 
-create table theme
+create table category
 (
-  theme_id              serial,
+  category_id           serial,
   description           varchar(1000) not null,
   short_description     varchar(100) not null,
-  constraint theme_pk primary key (theme_id)
+  constraint category_pk primary key (category_id)
 );
 
 
@@ -27,7 +27,7 @@ create table field_type
 (
   field_type_id             serial,
   field_type_definition_id  integer not null,
-  theme_id                  integer not null,
+  category_id               integer not null,
   description               varchar(1000) not null,
   short_description         varchar(100) not null,
   min_value                 integer not null,
@@ -38,7 +38,7 @@ create table field_type
   search                    boolean default false not null,
   offer                     boolean default false not null,
   constraint field_type_pk primary key (field_type_id),
-  constraint field_type_theme_fk foreign key (theme_id) references theme(theme_id),
+  constraint field_type_category_fk foreign key (category_id) references category(category_id),
   constraint field_type_field_type_definition_fk foreign key (field_type_definition_id) references field_type_definition(field_type_definition_id)
 );
 
@@ -69,12 +69,12 @@ create table topic
 (
   topic_id              serial,
   advertiser_id         integer not null,
-  theme_id              integer not null,
+  category_id           integer not null,
   valid_from            date not null,
   valid_to              date not null,
   search_or_offer       varchar(5) check(search_or_offer in ('SEARCH', 'OFFER')) not null,
   constraint topic_pk primary key (topic_id),
-  constraint topic_theme_fk foreign key (theme_id) references theme(theme_id),
+  constraint topic_category_fk foreign key (category_id) references category(category_id),
   constraint topic_advertiser_fk foreign key (advertiser_id) references advertiser(advertiser_id)
 );
 
@@ -83,7 +83,7 @@ create table topic_value
 (
   topic_value_id        serial,
   topic_id              integer not null,
-  theme_id              integer not null,
+  category_id           integer not null,
   field_type_id         integer not null,
   value_num             numeric(18,2),
   value_varchar         varchar(4000),
@@ -91,7 +91,7 @@ create table topic_value
   value_boolean         boolean,
   constraint topic_value_pk primary key (topic_value_id),
   constraint topic_value_topic_fk foreign key (topic_id) references topic(topic_id),
-  constraint topic_value_theme_fk foreign key (theme_id) references theme(theme_id),
+  constraint topic_value_category_fk foreign key (category_id) references category(category_id),
   constraint topic_value_field_type_fk foreign key (field_type_id) references field_type(field_type_id)
 );
 
@@ -118,16 +118,16 @@ create table address
 );
 
 
-create view vw_theme
+create view vw_category
 as
-select theme_id,
+select category_id,
        short_description,
        description,
        (select count(1) from topic where search_or_offer='SEARCH') search_count, 
        (select count(1) from topic where search_or_offer='OFFER') offer_count
-  from theme;
+  from category;
 
-
+  
 -- Field Type Definition
 insert into field_type_definition values (1, 'Number');
 insert into field_type_definition values (2, 'Text (single line)');
@@ -142,9 +142,9 @@ insert into field_type_definition values (10, 'Picture');
 insert into field_type_definition values (11, 'Date');
 insert into field_type_definition values (12, 'Price');
 
--- Themes
-insert into theme values (1, 'Unterkünfte', 'Unterkünfte');
-insert into theme values (2, 'Mitfahrgelegenheiten', 'Mitfahrgelegenheiten');
+-- categorys
+insert into category values (1, 'Unterkünfte', 'Unterkünfte');
+insert into category values (2, 'Mitfahrgelegenheiten', 'Mitfahrgelegenheiten');
 
 -- Field Type
 insert into field_type values (1, 2, 1, 'Titel', 'Titel', 1, 100, 1, true, false, true, true);

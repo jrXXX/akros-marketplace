@@ -18,9 +18,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/FieldTypeDefinitionResponseDTO'
 
-  /listThemes:
+  /listCategories:
     get:
-      summary: List the themes
+      summary: List categories
       description: used for primary search page
       responses:
         200:
@@ -29,17 +29,17 @@ paths:
             application/json:
               schema:
                 items:
-                  $ref: '#/components/schemas/VWThemeResponseDTO'
+                  $ref: '#/components/schemas/VWCategoryResponseDTO'
 
-  /listThemeSearchFieldTypes/{themeId}:
+  /listCategorySearchFieldTypes/{categoryId}:
     get:
-      summary: List the search field types for one theme
+      summary: List the search field types for one categorie
       description: used for primary search page
       parameters:
-        - name: themeId
+        - name: categoryId
           in: path
           required: true
-          description: Foreign Key ID to Theme.
+          description: Foreign Key ID to Category.
           schema:
             type: integer
             format: int64
@@ -52,15 +52,15 @@ paths:
                 items:
                   $ref: '#/components/schemas/FieldTypeResponseDTO'
 
-  /listTopicFieldTypes/{themeId}/{search}:
+  /listTopicFieldTypes/{categoryId}/{search}:
     get:
       summary: List the field types to edit and add another search/offer topic 
       description: used to get the fields to add a new topic
       parameters:
-        - name: themeId
+        - name: categoryId
           in: path
           required: true
-          description: Foreign Key ID to Theme.
+          description: Foreign Key ID to Category.
           schema:
             type: integer
             format: int64
@@ -161,10 +161,10 @@ components:
           type: string
           example: Parkplatz
 
-    VWThemeResponseDTO:
+    VWCategoryResponseDTO:
       type: object
       properties:
-        themeId:
+        categoryId:
           type: integer
           format: int64
         description:
@@ -180,7 +180,7 @@ components:
     FieldTypeResponseDTO:
       type: object
       properties:
-        themeId:
+        categoryId:
           type: integer
           format: int64
         fieldTypeId:
@@ -232,7 +232,7 @@ components:
         topicId:
           type: integer
           format: int64
-        themeId:
+        categoryId:
           type: integer
           format: int64
         searchOrOffer:
@@ -265,7 +265,7 @@ components:
         topicId:
           type: integer
           format: int64
-        themeId:
+        categoryId:
           type: integer
           format: int64
         searchOrOffer:
@@ -328,7 +328,7 @@ components:
         fieldTypeId:
           type: integer
           format: int64
-        themeId:
+        categoryId:
           type: integer
           format: int64
         valueNumFrom:

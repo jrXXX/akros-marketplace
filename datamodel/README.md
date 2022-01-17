@@ -5,7 +5,7 @@
 
 ### Database Configuration
 - **user** : am
-- **password** : am
+- **passsword** : am
 - **database_name** : am
 - **host** : localhost
 - **port** : 5432
@@ -22,11 +22,7 @@ The folder **../db_init** is used for initialization of the database.
 
 The initialization will fail, if encoding of file **../db_init/01-init.sh** is not Unix like. Line endings have to be CR and not Windows like CRLF.
 
-**Do this manually:**
 - Convert to Unix with command : **dos2unix < 01-init.sh > 01-init.sh.ux** (replace old file with new one)
-
-
-**Or activate always treat line endings Unix like to CR:**
 - Force git not to autoconvert CR to CRLF (always CR) : **git config --global core.autocrlf false**
 
 
@@ -37,5 +33,4 @@ The initialization will fail, if encoding of file **../db_init/01-init.sh** is n
 
 ### Data Model
 
-The data model is described in folder 'datamodel'.
-
+![Data Model](akros_ma_dyn.svg)
