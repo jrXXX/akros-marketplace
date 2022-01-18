@@ -15,13 +15,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;
 
 import ch.akros.marketplace.api.model.TopicSearchFieldTypeValuesRequestDTO;
 import ch.akros.marketplace.api.model.TopicSearchListResponseDTO;
 import ch.akros.marketplace.api.model.TopicSearchRequestDTO;
-import ch.akros.marketplace.dataservice.AkrosMarketplacedataServiceApplication;
+import ch.akros.marketplace.dataservice.AkrosMarketplaceDataServiceApplication;
 import ch.akros.marketplace.dataservice.constants.EFieldTypeDefinition;
 import ch.akros.marketplace.dataservice.entity.FieldType;
 import ch.akros.marketplace.dataservice.entity.Topic;
@@ -31,13 +30,10 @@ import ch.akros.marketplace.dataservice.repository.FieldTypeRepository;
 import ch.akros.marketplace.dataservice.repository.TopicRepository;
 import ch.akros.marketplace.dataservice.repository.VWCategoryRepository;
 import ch.akros.marketplace.dataservice.service.TopicService;
-import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest
-@ContextConfiguration(classes = AkrosMarketplacedataServiceApplication.class)
-@TestPropertySource("classpath:postgres_db_url.properties")
+@ContextConfiguration(classes = AkrosMarketplaceDataServiceApplication.class)
 @Transactional
-@Slf4j
 public class SearchTopicsTest {
   @Autowired
   private TopicService         topicService;

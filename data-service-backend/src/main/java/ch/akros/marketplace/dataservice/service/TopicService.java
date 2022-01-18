@@ -34,10 +34,8 @@ import ch.akros.marketplace.dataservice.repository.AdvertiserRepository;
 import ch.akros.marketplace.dataservice.repository.CategoryRepository;
 import ch.akros.marketplace.dataservice.repository.FieldTypeRepository;
 import ch.akros.marketplace.dataservice.repository.TopicRepository;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
-@Slf4j
 public class TopicService {
   @Autowired
   private FieldTypeRepository  fieldTypeRepository;
@@ -57,8 +55,8 @@ public class TopicService {
   @Autowired
   private CategoryService      categoryService;
 
-  public List<FieldTypeResponseDTO> listTopicFieldTypes(Long categoryId, String search) {
-    return fieldTypeRepository.listTopicSearchFieldTypes(categoryId, "SEARCH".equalsIgnoreCase(search))
+  public List<FieldTypeResponseDTO> listTopicFieldTypes(Long categoryId, String searchOrOffer) {
+    return fieldTypeRepository.listTopicSearchFieldTypes(categoryId, "SEARCH".equals(searchOrOffer))
                               .stream()
                               .map(this::toFieldTypeResponseDTO)
                               .collect(Collectors.toList());

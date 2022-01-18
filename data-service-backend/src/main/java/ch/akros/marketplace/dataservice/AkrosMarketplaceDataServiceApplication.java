@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @SpringBootApplication
-public class AkrosMarketplacedataServiceApplication {
+public class AkrosMarketplaceDataServiceApplication {
   private static final String POSTGRES_DB_HOST_ENV = "POSTGRES_DB_HOST";
 
   public static void main(String[] args) {
-    SpringApplication application = new SpringApplication(AkrosMarketplacedataServiceApplication.class);
+    SpringApplication application = new SpringApplication(AkrosMarketplaceDataServiceApplication.class);
 
     application.run(args);
   }

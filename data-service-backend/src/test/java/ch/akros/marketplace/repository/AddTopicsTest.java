@@ -11,10 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;
 
-import ch.akros.marketplace.dataservice.AkrosMarketplacedataServiceApplication;
+import ch.akros.marketplace.dataservice.AkrosMarketplaceDataServiceApplication;
 import ch.akros.marketplace.dataservice.constants.EFieldTypeDefinition;
 import ch.akros.marketplace.dataservice.entity.Advertiser;
 import ch.akros.marketplace.dataservice.entity.Category;
@@ -27,8 +26,7 @@ import ch.akros.marketplace.dataservice.repository.FieldTypeRepository;
 import ch.akros.marketplace.dataservice.repository.TopicRepository;
 
 @SpringBootTest
-@ContextConfiguration(classes = AkrosMarketplacedataServiceApplication.class)
-@TestPropertySource("classpath:postgres_db_url.properties")
+@ContextConfiguration(classes = AkrosMarketplaceDataServiceApplication.class)
 @Transactional
 public class AddTopicsTest {
   private final static int     ADD_COUNT_OFFERS          = 100;
@@ -191,7 +189,7 @@ public class AddTopicsTest {
     return randomWord(length, length);
   }
 
-  private static String randomWord(int minLength, int maxLength) {
+  private String randomWord(int minLength, int maxLength) {
     int length = minLength != maxLength ? ThreadLocalRandom.current().nextInt(minLength, maxLength + 1) : minLength;
     StringBuilder sb = new StringBuilder();
 
