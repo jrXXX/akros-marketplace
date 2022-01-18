@@ -238,7 +238,7 @@ public class TopicService {
           if (topicSearchFieldTypeValuesRequestDTO.getValueNumTo() != null
               && topicSearchFieldTypeValuesRequestDTO.getValueNumTo() > 0)
           {
-            sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and tv.value_num between :valueNumberFrom%d and :valueNumberTo%d)\n",
+            sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and tv.value_num between :valueNumberFrom%d and :valueNumberTo%d)",
                                                   i,
                                                   i,
                                                   i));
@@ -302,8 +302,6 @@ public class TopicService {
       default:
         break;
     }
-
-    sqlStringBuilder.append("\n");
   }
 
   private TopicSearchColumnHeaderResponseDTO toTopicSearchColumnHeaderResponseDTO(FieldTypeResponseDTO fieldTypeResponseDTO) {
