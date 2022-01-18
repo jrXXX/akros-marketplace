@@ -3,6 +3,7 @@ package ch.akros.marketplace.dataservice.service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import ch.akros.marketplace.api.model.TopicLoadResponseDTO;
 import ch.akros.marketplace.api.model.TopicSearchColumnHeaderResponseDTO;
 import ch.akros.marketplace.api.model.TopicSearchFieldTypeValuesRequestDTO;
 import ch.akros.marketplace.api.model.TopicSearchListResponseDTO;
+import ch.akros.marketplace.api.model.TopicSearchRequestDTO;
 import ch.akros.marketplace.api.model.TopicSearchResponseDTO;
 import ch.akros.marketplace.api.model.TopicSearchValueResponseDTO;
 import ch.akros.marketplace.api.model.TopicStoreRequestDTO;
@@ -32,8 +34,10 @@ import ch.akros.marketplace.dataservice.repository.AdvertiserRepository;
 import ch.akros.marketplace.dataservice.repository.CategoryRepository;
 import ch.akros.marketplace.dataservice.repository.FieldTypeRepository;
 import ch.akros.marketplace.dataservice.repository.TopicRepository;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
 public class TopicService {
   @Autowired
   private FieldTypeRepository  fieldTypeRepository;
@@ -176,32 +180,43 @@ public class TopicService {
     topicRepository.deleteById(topicId);
   }
 
-  public TopicSearchListResponseDTO searchTopic(List<TopicSearchFieldTypeValuesRequestDTO> topicSearchFieldTypeValuesRequestDTO) {
+  public TopicSearchListResponseDTO searchTopic(TopicSearchRequestDTO topicSearchRequestDTO) {
     MapSqlParameterSource namedParameters = new MapSqlParameterSource();
-    Long categoryId = null;
+    namedParameters.addValue("categoryId", topicSearchRequestDTO.getCategoryId());
 
-    StringBuilder sqlStringBuilder = new StringBuilder("select t from topic t where t.category.categoryId=:categoryId");
-    for (int i = 0; i < topicSearchFieldTypeValuesRequestDTO.size(); i++) {
-      if (i == 0) {
-        categoryId = topicSearchFieldTypeValuesRequestDTO.get(0).getCategoryId();
-        namedParameters.addValue("categoryId", categoryId);
+    StringBuilder sqlStringBuilder = null;
+
+    if (topicSearchRequestDTO.getSearchOrOffer() != null && topicSearchRequestDTO.getSearchOrOffer().length() >= 0) {
+      sqlStringBuilder = new StringBuilder("select t.topic_id from topic t where t.category_id=:categoryId and t.search_or_offer=:searchOrOffer");
+      namedParameters.addValue("searchOrOffer", topicSearchRequestDTO.getSearchOrOffer());
+    }
+    else {
+      sqlStringBuilder = new StringBuilder("select t.topic_id from topic t where t.category_id=:categoryId");
+    }
+
+    if (Objects.nonNull(topicSearchRequestDTO.getSearchValues())) {
+      for (int i = 0; i < topicSearchRequestDTO.getSearchValues().size(); i++) {
+        addSqlSubselect(i, topicSearchRequestDTO.getSearchValues().get(i), sqlStringBuilder, namedParameters);
       }
-      addSqlSubselect(i, topicSearchFieldTypeValuesRequestDTO.get(i), sqlStringBuilder, namedParameters);
     }
 
     NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
-    List<Topic> topics = namedParameterJdbcTemplate.queryForList(sqlStringBuilder.toString(),
-                                                                 namedParameters,
-                                                                 Topic.class);
+
+    List<Long> topicIds = namedParameterJdbcTemplate.queryForList(sqlStringBuilder.toString(),
+                                                                  namedParameters,
+                                                                  Long.class);
 
     TopicSearchListResponseDTO result = new TopicSearchListResponseDTO();
 
-    result.setColumnHeader(categoryService.listCategorySearchFieldTypes(categoryId)
+    result.setColumnHeader(categoryService.listCategorySearchFieldTypes(topicSearchRequestDTO.getCategoryId())
                                           .stream()
                                           .map(this::toTopicSearchColumnHeaderResponseDTO)
                                           .collect(Collectors.toList()));
 
-    result.setTopics(topics.stream().map(this::toTopicSearchResponseDTO).collect(Collectors.toList()));
+    result.setTopics(topicRepository.findAllById(topicIds)
+                                    .stream()
+                                    .map(this::toTopicSearchResponseDTO)
+                                    .collect(Collectors.toList()));
 
     return result;
   }
@@ -211,10 +226,10 @@ public class TopicService {
                                StringBuilder sqlStringBuilder,
                                MapSqlParameterSource namedParameters)
   {
-    Long fieldTypeDefinitionId = fieldTypeRepository.getById(topicSearchFieldTypeValuesRequestDTO.getFieldTypeId())
-                                                    .getFieldTypeDefinition()
-                                                    .getFieldTypeDefinitionId();
-    EFieldTypeDefinition eFieldTypeDefinition = EFieldTypeDefinition.values()[fieldTypeDefinitionId.intValue()];
+    Integer fieldTypeDefinitionId = fieldTypeRepository.getById(topicSearchFieldTypeValuesRequestDTO.getFieldTypeId())
+                                                       .getFieldTypeDefinition()
+                                                       .getFieldTypeDefinitionId();
+    EFieldTypeDefinition eFieldTypeDefinition = EFieldTypeDefinition.values()[fieldTypeDefinitionId];
 
     switch (eFieldTypeDefinition) {
       case PRICE:
@@ -225,7 +240,7 @@ public class TopicService {
           if (topicSearchFieldTypeValuesRequestDTO.getValueNumTo() != null
               && topicSearchFieldTypeValuesRequestDTO.getValueNumTo() > 0)
           {
-            sqlStringBuilder.append(String.format(" and t in (select tv.topic from TopicValue tv where tv.category.categoryId=:categoryId and tv.fieldType.fieldTypeId=:fieldTypeId%d and tv.valueNumber between :valueNumberFrom%d and :valueNumberTo%d",
+            sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and tv.value_num between :valueNumberFrom%d and :valueNumberTo%d)\n",
                                                   i,
                                                   i,
                                                   i));
@@ -237,7 +252,7 @@ public class TopicService {
                                      topicSearchFieldTypeValuesRequestDTO.getValueNumTo());
           }
           else {
-            sqlStringBuilder.append(String.format(" and t in (select tv.topic from TopicValue tv where tv.category.categoryId=:categoryId and tv.fieldType.fieldTypeId=:fieldTypeId%d and tv.valueNumber >= :valueNumberFrom%d",
+            sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and tv.value_num >= :valueNumberFrom%d)",
                                                   i,
                                                   i));
             namedParameters.addValue(String.format("fieldTypeId%d", i),
@@ -249,7 +264,7 @@ public class TopicService {
         else if (topicSearchFieldTypeValuesRequestDTO.getValueNumTo() != null
                  && topicSearchFieldTypeValuesRequestDTO.getValueNumTo() > 0)
         {
-          sqlStringBuilder.append(String.format(" and t in (select tv.topic from TopicValue tv where tv.category.categoryId=:categoryId and tv.fieldType.fieldTypeId=:fieldTypeId%d and tv.valueNumber <= :valueNumberTo%d",
+          sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and tv.value_num <= :valueNumberTo%d)",
                                                 i,
                                                 i));
           namedParameters.addValue(String.format("fieldTypeId%d", i),
@@ -258,14 +273,11 @@ public class TopicService {
                                    topicSearchFieldTypeValuesRequestDTO.getValueNumTo());
         }
 
-        topicSearchFieldTypeValuesRequestDTO.getValueNumTo();
-
-        sqlStringBuilder.append(" and t in (select tv.topic from TopicValue tv where tv.category.categoryId=:categoryId and tv.fieldType.fieldTypeId=:fieldTypeId%d and tv.valueNumber between :valueNumberFrom%d and :valueNumberTo%d");
         break;
       }
 
       case BOOLEAN: {
-        sqlStringBuilder.append(String.format(" and t in (select tv.topic from TopicValue tv where tv.category.categoryId=:categoryId and tv.fieldType.fieldTypeId=:fieldTypeId%d and tv.valueBoolean=:valueBoolean%d)",
+        sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and tv.value_boolean=:valueBoolean%d)",
                                               i,
                                               i));
         namedParameters.addValue(String.format("fieldTypeId%d", i),
@@ -275,9 +287,25 @@ public class TopicService {
         break;
       }
 
+      case EMAIL:
+      case PHONE_NUMBER:
+      case TEXT_MULTI_LINE:
+      case TEXT_SINGLE_LINE: {
+        sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and tv.value_varchar like '%%' || :valueVarchar%d || '%%')",
+                                              i,
+                                              i));
+        namedParameters.addValue(String.format("fieldTypeId%d", i),
+                                 topicSearchFieldTypeValuesRequestDTO.getFieldTypeId());
+        namedParameters.addValue(String.format("valueVarchar%d", i),
+                                 topicSearchFieldTypeValuesRequestDTO.getValueVarchar());
+        break;
+      }
+
       default:
         break;
     }
+
+    sqlStringBuilder.append("\n");
   }
 
   private TopicSearchColumnHeaderResponseDTO toTopicSearchColumnHeaderResponseDTO(FieldTypeResponseDTO fieldTypeResponseDTO) {

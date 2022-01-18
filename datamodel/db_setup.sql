@@ -75,7 +75,7 @@ create table topic
   category_id           integer not null,
   valid_from            date not null,
   valid_to              date not null,
-  search_or_offer       varchar(5) check(search_or_offer in ('SEARCH', 'OFFER')) not null,
+  search_or_offer       varchar(6) check(search_or_offer in ('SEARCH', 'OFFER')) not null,
   constraint topic_pk primary key (topic_id),
   constraint topic_category_fk foreign key (category_id) references category(category_id),
   constraint topic_advertiser_fk foreign key (advertiser_id) references advertiser(advertiser_id)
@@ -121,14 +121,14 @@ create table address
 );
 
 
-create view vw_category
+create or replace view vw_category
 as
 select category_id,
        short_description,
        description,
-       (select count(1) from topic where search_or_offer='SEARCH') search_count, 
-       (select count(1) from topic where search_or_offer='OFFER') offer_count
-  from category;
+       (select count(1) from topic t where search_or_offer='SEARCH' and t.category_id=c.category_id) search_count, 
+       (select count(1) from topic t where search_or_offer='OFFER' and t.category_id=c.category_id) offer_count
+  from category c;
 
   
 -- Field Type Definition

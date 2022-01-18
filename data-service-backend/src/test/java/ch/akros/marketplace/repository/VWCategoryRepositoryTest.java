@@ -3,7 +3,6 @@ package ch.akros.marketplace.repository;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -26,7 +25,7 @@ public class VWCategoryRepositoryTest {
   private VWCategoryRepository vwCategoryRepository;
 
   @Test
-  public void allEntriesExistsInFieldTypeDefinition() throws IOException {
+  public void allEntriesExistsInFieldTypeDefinition() {
     List<VWCategory> vwCategoryList = vwCategoryRepository.findAll();
     assertTrue(vwCategoryList.size() > 0);
   }

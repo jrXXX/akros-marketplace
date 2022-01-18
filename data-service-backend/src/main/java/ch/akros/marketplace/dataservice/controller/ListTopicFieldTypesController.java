@@ -22,7 +22,9 @@ public class ListTopicFieldTypesController implements ListTopicFieldTypesApi {
   private TopicService topicService;
 
   @Override
-  public ResponseEntity<List<FieldTypeResponseDTO>> listTopicFieldTypesCategoryIdSearchGet(Long categorieId, String search) {
+  public ResponseEntity<List<FieldTypeResponseDTO>> listTopicFieldTypesCategoryIdSearchGet(Long categorieId,
+                                                                                           String search)
+  {
     try {
       log.debug("ListTopicFieldTypesController.listTopicFieldTypesCategoryIdSearchGet() called");
 

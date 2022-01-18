@@ -1,8 +1,6 @@
 
 package ch.akros.marketplace.repository;
 
-import java.io.IOException;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,8 +23,8 @@ public class FieldTypeRepositoryTest {
   private CategoryRepository categoryRepository;
 
   @Test
-  public void allEntriesExistsInFieldTypeDefinition() throws IOException {
-    Category category = categoryRepository.findById(1L).orElse(null);
+  public void allEntriesExistsInFieldTypeDefinition() {
+    Category category = categoryRepository.getById(1L);
 
     if (category != null) {
       log.error(String.format("category[id:%d/description:%s/shortDescription:%s/fieldTypeSize:%d]",
@@ -36,15 +34,15 @@ public class FieldTypeRepositoryTest {
                               category.getFieldTypes().size()));
 
       category.getFieldTypes()
-           .forEach(e -> log.error(String.format("fieldType[id:%d/description:%s/shortDescription:%s/sortNumber:%d/minValue:%d/maxValue:%d/fieldTypeDefinitionId:%d/fieldTypeDefinitionDescription:%s]",
-                                                 e.getFieldTypeId(),
-                                                 e.getDescription(),
-                                                 e.getShortDescription(),
-                                                 e.getSortNumber(),
-                                                 e.getMinValue(),
-                                                 e.getMaxValue(),
-                                                 e.getFieldTypeDefinition().getFieldTypeDefinitionId(),
-                                                 e.getFieldTypeDefinition().getDescription())));
+              .forEach(e -> log.error(String.format("fieldType[id:%d/description:%s/shortDescription:%s/sortNumber:%d/minValue:%d/maxValue:%d/fieldTypeDefinitionId:%d/fieldTypeDefinitionDescription:%s]",
+                                                    e.getFieldTypeId(),
+                                                    e.getDescription(),
+                                                    e.getShortDescription(),
+                                                    e.getSortNumber(),
+                                                    e.getMinValue(),
+                                                    e.getMaxValue(),
+                                                    e.getFieldTypeDefinition().getFieldTypeDefinitionId(),
+                                                    e.getFieldTypeDefinition().getDescription())));
     }
   }
 }

@@ -23,8 +23,8 @@ public class FieldTypeDefinition {
   @Id
   @Column(name = "FIELD_TYPE_DEFINITION_ID", unique = true)
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long   fieldTypeDefinitionId;
+  private Integer fieldTypeDefinitionId;
 
   @Column(name = "DESCRIPTION")
-  private String description;
+  private String  description;
 }

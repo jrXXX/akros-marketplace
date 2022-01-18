@@ -35,7 +35,7 @@ public class FieldType {
   @ToString.Exclude
   @JoinColumn(referencedColumnName = "CATEGORY_ID", name = "CATEGORY_ID",
       foreignKey = @ForeignKey(name = "FIELD_TYPE_CATEGORY_FK"))
-  private Category                 category;
+  private Category              category;
 
   @Column(name = "DESCRIPTION")
   private String                description;

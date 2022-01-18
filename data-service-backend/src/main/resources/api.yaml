@@ -156,7 +156,7 @@ components:
       properties:
         fieldTypeDefinitionId:
           type: integer
-          format: int64
+          format: int32
         description:
           type: string
           example: Parkplatz
@@ -188,7 +188,7 @@ components:
           format: int64
         fieldTypeDefinitionId:
           type: integer
-          format: int64
+          format: int32
         fieldTypeDefinitionDescription:
           type: string
           example: Number
@@ -293,7 +293,7 @@ components:
           example: Beschreibung
         fieldTypeDefinitionId:
           type: integer
-          format: int64
+          format: int32
         fieldTypeDefinitionDescription:
           type: string
           example: Number
@@ -318,17 +318,23 @@ components:
             $ref: '#/components/schemas/FieldTypeChooseResponseDTO'
 
     TopicSearchRequestDTO:
-      type: array
-      items:
-        $ref: '#/components/schemas/TopicSearchFieldTypeValuesRequestDTO'
+      type: object
+      properties:
+        categoryId:
+          type: integer
+          format: int64
+        searchOrOffer:
+          type: string
+          example: OFFER or SEARCH (may be null for both)
+        searchValues:
+          type: array
+          items:
+            $ref: '#/components/schemas/TopicSearchFieldTypeValuesRequestDTO'
 
     TopicSearchFieldTypeValuesRequestDTO:
       type: object
       properties:
         fieldTypeId:
-          type: integer
-          format: int64
-        categoryId:
           type: integer
           format: int64
         valueNumFrom:
@@ -401,7 +407,7 @@ components:
           type: boolean
         fieldTypeDefinitionId:
           type: integer
-          format: int64
+          format: int32
         fieldTypeDefinitionDescription:
           type: string
           example: Number

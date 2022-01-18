@@ -3,8 +3,6 @@ package ch.akros.marketplace.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.IOException;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,7 +22,7 @@ public class FieldTypeDefinitionRepositoryTest {
   private FieldTypeDefinitionRepository fieldTypeDefinitionRepository;
 
   @Test
-  public void allEntriesExistsInFieldTypeDefinition() throws IOException {
+  public void allEntriesExistsInFieldTypeDefinition() {
     assertEquals(12, fieldTypeDefinitionRepository.count());
   }
 }

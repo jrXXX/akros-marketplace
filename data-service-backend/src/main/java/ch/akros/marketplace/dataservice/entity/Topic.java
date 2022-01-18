@@ -46,9 +46,10 @@ public class Topic {
   private Advertiser       advertiser;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(referencedColumnName = "CATEGORY_ID", name = "CATEGORY_ID", foreignKey = @ForeignKey(name = "TOPIC_CATEGORY_FK"))
+  @JoinColumn(referencedColumnName = "CATEGORY_ID", name = "CATEGORY_ID",
+      foreignKey = @ForeignKey(name = "TOPIC_CATEGORY_FK"))
   @ToString.Exclude
-  private Category            category;
+  private Category         category;
 
   @Column(name = "VALID_FROM")
   private LocalDate        validFrom;

@@ -46,7 +46,7 @@ public class TopicValue {
   @JoinColumn(referencedColumnName = "CATEGORY_ID", name = "CATEGORY_ID",
       foreignKey = @ForeignKey(name = "TOPIC_VALUE_CATEGORY_FK"))
   @ToString.Exclude
-  private Category     category;
+  private Category  category;
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(referencedColumnName = "FIELD_TYPE_ID", name = "FIELD_TYPE_ID",

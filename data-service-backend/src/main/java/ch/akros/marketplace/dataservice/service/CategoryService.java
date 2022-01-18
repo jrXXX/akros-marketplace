@@ -20,16 +20,16 @@ import ch.akros.marketplace.dataservice.repository.VWCategoryRepository;
 @Service
 public class CategoryService {
   @Autowired
-  private VWCategoryRepository   vwCategoryRepository;
+  private VWCategoryRepository vwCategoryRepository;
 
   @Autowired
-  private FieldTypeRepository fieldTypeRepository;
+  private FieldTypeRepository  fieldTypeRepository;
 
   public List<VWCategoryResponseDTO> listCategories() {
     return vwCategoryRepository.findAll(Sort.by(Sort.Direction.ASC, "description"))
-                            .stream()
-                            .map(this::toVWCategoryResponseDTO)
-                            .collect(Collectors.toList());
+                               .stream()
+                               .map(this::toVWCategoryResponseDTO)
+                               .collect(Collectors.toList());
   }
 
   private VWCategoryResponseDTO toVWCategoryResponseDTO(VWCategory vwCategory) {
