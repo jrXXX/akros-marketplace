@@ -1,7 +1,9 @@
 
 package ch.akros.marketplace.repository;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,17 +12,19 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import ch.akros.marketplace.dataservice.AkrosMarketplaceDataServiceApplication;
-import ch.akros.marketplace.dataservice.repository.FieldTypeDefinitionRepository;
+import ch.akros.marketplace.dataservice.entity.VWCategory;
+import ch.akros.marketplace.dataservice.repository.VWCategoryRepository;
 
 @SpringBootTest
 @ContextConfiguration(classes = AkrosMarketplaceDataServiceApplication.class)
 @Transactional
-public class FieldTypeDefinitionRepositoryTest {
+public class VWCategoryRepositoryTest {
   @Autowired
-  private FieldTypeDefinitionRepository fieldTypeDefinitionRepository;
+  private VWCategoryRepository vwCategoryRepository;
 
   @Test
   public void allEntriesExistsInFieldTypeDefinition() {
-    assertEquals(12, fieldTypeDefinitionRepository.count());
+    List<VWCategory> vwCategoryList = vwCategoryRepository.findAll();
+    assertTrue(vwCategoryList.size() > 0);
   }
 }
