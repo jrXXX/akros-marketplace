@@ -19,11 +19,11 @@ export class JwtInterceptor implements HttpInterceptor {
 
         if (isLoggedIn && isApiUrl)
          {
-            console.log(this.auth.idToken)
+            const token = "Bearer " + this.auth.idToken.replace(/"/g, '')
+            console.log(token)
             request = request.clone({
                 setHeaders: {
-                    // Authorization: `Bearer ${this.auth.idToken}`
-                    Authorization: `Bearer ${this.auth.accessToken}`
+                    Authorization: token
                 }
             });
         }
