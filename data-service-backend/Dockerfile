@@ -11,7 +11,7 @@ RUN jar -xf ../*.jar
 
 FROM openjdk:11-jre-slim
 
-EXPOSE 8080 8081
+EXPOSE 8080 8081 8443
 VOLUME /tmp
 ARG DEPENDENCY=/workdir/server/target/dependency
 COPY --from=builder ${DEPENDENCY}/BOOT-INF/lib /app/lib

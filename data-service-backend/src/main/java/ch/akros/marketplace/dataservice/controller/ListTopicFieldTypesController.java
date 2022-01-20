@@ -15,7 +15,6 @@ import ch.akros.marketplace.dataservice.service.TopicService;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
 public class ListTopicFieldTypesController implements ListTopicFieldTypesApi {
   @Autowired
