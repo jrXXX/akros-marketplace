@@ -14,13 +14,6 @@ logging:
             StatementCreatorUtils: DEBUG
     root: INFO
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    initialization-mode: always
-    password: am
-    platform: postgres
-    #url: jdbc:postgresql://${POSTGRES_DB_HOST}:5432/am
-    username: am
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
