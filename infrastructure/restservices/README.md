@@ -1,18 +1,19 @@
-## Rest-Services
+## Rest-Services + Administration-Business-UI
 
-- This command runs the preconfigured PostgreSQL database as described in the **database_only** section.
-- This is primary useful for frontend developers testing the frontend to Rest-Service-End-Point communication.
+### Three Containers are started
+1. This command runs the preconfigured **PostgreSQL** database as described in the **database_only** section.
+2. The **Data-Service-Backend** is started in a separate container and contains the **Rest Services**.
+3. The **Administration-Business-UI** is started in a separate container to configure the marketplace.
 
-### Rest-Service-End-Point Configuration
-- **host** : localhost
-- **port** : 8080
-
-### Swagger End Point
-- **End Point** : http://localhost:8080
+### Rest-Service-End-Point Configuration + Swagger End Point
+- **End Point** : https://localhost:8443
 
 ### Start/Stop
 - **start**: docker-compose up
 - **stop**: docker-compose down
+
+### Administration-Business-UI Configuration
+- **URL** : https://localhost:9443
 
 ### Reinitialize Rest-Service
 

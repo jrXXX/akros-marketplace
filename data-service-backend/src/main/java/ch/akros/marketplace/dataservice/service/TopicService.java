@@ -289,7 +289,7 @@ public class TopicService {
       case PHONE_NUMBER:
       case TEXT_MULTI_LINE:
       case TEXT_SINGLE_LINE: {
-        sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and tv.value_varchar like '%%' || :valueVarchar%d || '%%')",
+        sqlStringBuilder.append(String.format(" and t.topic_id in (select tv.topic_id from topic_value tv where tv.category_id=:categoryId and tv.field_type_id=:fieldTypeId%d and upper(tv.value_varchar) like upper('%%' || :valueVarchar%d || '%%'))",
                                               i,
                                               i));
         namedParameters.addValue(String.format("fieldTypeId%d", i),

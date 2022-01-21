@@ -6,8 +6,20 @@ services:
       context: ../../data-service-backend
     ports:
       - "8080:8080"
-      - "8081:8081"
       - "8443:8443"
+    environment:
+      - POSTGRES_DB_HOST=postgres_db
+    networks:
+      - spring-postgres
+    depends_on:
+      - postgres
+
+  administration-business-ui:
+    container_name: administration-business-ui
+    build:
+      context: ../../administration-business-ui
+    ports:
+      - "9090:8080"
     environment:
       - POSTGRES_DB_HOST=postgres_db
     networks:
